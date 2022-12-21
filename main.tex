@@ -1,0 +1,798 @@
+
+\documentclass[12pt]{article}
+\usepackage{sbc-template}
+\usepackage{graphicx,url}
+\usepackage{xcolor}
+\usepackage[brazil]{babel}   
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\graphicspath{ {./} }
+\usepackage{quoting}
+\usepackage{hyphenat}
+\usepackage{hyperref}
+\usepackage{multicol}
+
+\sloppy
+\title{Mensuração do Desempenho de Estudantes dos Cursos de Computação da UFPA, na Prova do ENADE em 2017 \ \ \ \ \ \ \ \ \ \ \ \ via Teoria da Resposta ao Item}
+
+\author{Mário D. R. Valente\inst{1}, Thiago S. Lima\inst{1}, Dionne C. Monteiro\inst{2} }
+
+\address{Graduando em Sistemas de Informação - Universidade Federal do Pará(UFPA) \\
+  Rua. Augusto Corrêa 01 -- Guamá -- Belém -- PA -- Brasil
+\nextinstitute
+  Professor Dr., Faculdade de Computação - Universidade Federal do Pará(UFPA)\\
+  Av. Augusto Corrêa 01 -- Guamá -- Belém - -- PA -- Brasil 
+    \email{ mario.valente@detran.pa.gov.br, thiago@gmail.com, dionne@ufpa.br}}
+
+\begin{document} 
+
+\maketitle
+
+\begin{abstract}
+ This study aimed to measure the performance (proficiency) of Computing students enrolled at UFPA, who took the Enade through Item Response Theory (IRT). The measurement of student performance was carried out using the two-parameter logistic model (ML2P), with data extracted from the website of the National Institute of Educational Studies and Research Anísio Teixeira (Inep) related to the Enade test in 2017, covering 235 students . The elaborated scale allowed to discriminate the students in three levels of performance. The results also showed that the items contained in the ENADE test represented a high degree of difficulty for the group that took the test, in which UFPA students have low performance in the subjects of Artificial Intelligence, Computing Theory, and Database. This result suggests that actions by HEI and public policies capable of contributing to improving the performance presented by students are necessary.
+  
+\noindent
+  \textbf{Keywords}: Performance, Proficiency, ENADE, Item Response Theory.
+\end{abstract}
+
+\begin{resumo} 
+Este estudo teve como objetivo mensurar o desempenho (proficiência) dos estudantes de Computação matriculados na UFPA, que realizaram o Enade por meio da Teoria da Resposta ao Item (TRI). A mensuração do desempenho dos estudantes foi realizada, utilizando-se o modelo logístico de dois parâmetros (ML2P), com dados extraídos do site do Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep) relativos à prova Enade em 2017, contemplando 235 estudantes. A escala elaborada permitiu discriminar os estudantes em três níveis de desempenho. Os resultados apontaram também que os itens contidos na prova ENADE representaram um alto grau de dificuldade para o grupo que realizou a prova, no qual os alunos da UFPA possuem baixo desempenho nos temas de Inteligência Artificial, Teoria da Computação, e Banco de Dados. Este resultado sugere que são necessárias ações das IES e políticas públicas capazes de contribuir para melhoria do desempenho apresentado pelos estudantes.
+  
+\noindent
+  \textbf{Palavras-chave}: Desempenho, Proficiência, ENADE, Teoria de Resposta ao Item.
+\end{resumo}
+
+
+\section{INTRODUÇÃO}
+
+O Exame Nacional de Desempenho dos Estudantes (ENADE) é um dos pilares da avaliação dos Sistema Nacional de Avaliação da Educação Superior (SINAES), criado pela Lei nº 10.861, de 14 de abril de 2004. Além do ENADE, os processos de avaliação de Cursos de Graduação e de Avaliação Institucional constituem o Tripé avaliativo do SINAES, os resultados desses instrumentos avaliativos, reunidos, permitem conhecer, em profundidade, o modo de funcionamento e a qualidade dos cursos e instituições de Educação Superior (IES) de todo o Brasil.
+
+O ENADE é uma prova aplicada anualmente aos alunos (ingressantes e concluintes) de cursos de graduação, em áreas definidas pelo Ministério da Educação e é realizado pelo INEP. O Enade é atualmente, o único instrumento oficial que avalia os resultados do processo de ensino aprendizagem e tem um peso significativo no desempenho das Instituições de Nível Superior no Brasil(BRASIL, 2017).
+
+O objetivo do Enade é o acompanhamento do processo de aprendizagem e do desempenho acadêmico dos estudantes em relação aos conteúdos programáticos previstos nas diretrizes curriculares do respectivo curso de graduação, suas habilidades para ajustamento às exigências decorrentes da evolução do conhecimento e suas competências para compreender temas exteriores ao âmbito específico de sua profissão, ligados à realidade brasileira e mundial e a outras áreas do conhecimento(BRASIL, 2017).
+
+
+A Prova do ENADE (2017), com duração total de 4 (quatro) horas, apresentou um componente de avaliação na Formação Geral (FG), comum aos cursos de todas as áreas e um Componente Específico (CE) de Cada Área. O ENADE foi operacionalizado por meio de uma prova, do Questionário de Percepção sobre a prova e o Questionário do Estudante.
+
+
+No componente de avaliação da Formação Geral, foram consideradas as seguintes características integrantes do perfil profissional:
+
+
+\begin{itemize}
+    \item Ético e comprometido com as questões sociais, culturais e ambientais;
+    \item Humanista e crítico, apoiado em conhecimentos científico, social e cultural, historicamente construídos, que transcendam a área de sua formação; 
+    \item Protagonista do saber, com visão do mundo em sua diversidade para práticas de multiletramentos, voltadas para o exercício da cidadania;
+    \item Proativo, solidário, autônomo e consciente na tomada de decisões, considerando o contexto situacional;
+    \item Colaborativo e propositivo no trabalho em equipes, grupos e redes, atuando com respeito, cooperação, iniciativa e responsabilidade social.”
+\end{itemize}
+	 
+
+	  
+
+No Componente de Formação Geral, de acordo com o art. 6º da Portaria Inep nº444, de 30 de maio de 2017, foram verificadas as seguintes competências:
+
+\begin{itemize}
+\item Fazer escolhas éticas e responsabilizar-se por suas conseqüências; 
+\item Promover diálogo e práticas de convivência, compartilhando saberes e conhecimentos; 
+\item Trabalhar em equipe, de forma flexível e colaborativa; 
+\item Buscar soluções viáveis e inovadoras na resolução de situações-problema;
+\item Organizar, interpretar e sintetizar informações para tomada de decisões; 
+\item Planejar e elaborar projetos de ação e intervenção a partir da análise de necessidades, de forma coerente, em contextos diversos; 
+\item Compreender as linguagens e suas respectivas variações como expressão das diferentes manifestações étnico-culturais;
+\item Identificar representações verbais, gráficas e numéricas de um mesmo significado; 
+\item Formular e articular argumentos e contra-argumentos consistentes em situações sociocomunicativas;
+\item Ler, interpretar e produzir textos com clareza e coerência.”
+\end{itemize}
+
+O cálculo do conceito ENADE é realizado para cada curso das Intistuições Brasileiras, enquadrado em uma área de abrangência no ENADE. A nota final do curso depende do desempenho dos estudantes concluintes no componente de conhecimento específico e no componente de formação geral.
+
+A parte referente ao Componente Especifico contribui com 75\% da nota final, enquanto a parcela, referente a Formação Geral, contribui com 25\%, em consonância com o número de questões da prova, 30 e 10, respectivamente. Os conceitos utilizados no ENADE variam de 1 a 5, e, à medida que esse valor aumenta, melhor terá sido o desempenho no exame.
+
+A nota final do estudante no Enade é obtida pela média ponderada na qual a parte de Formação Geral responde por 25\%, e a parte de conhecimento específico, por 75\%.
+
+
+O Componente de Formação Geral (FG) é assim constituído por: 
+
+\begin{itemize}
+\item 8 (oito) questões objetivas com peso idêntico, perfazendo 100\%. Assim, a nota bruta das questões objetivas de FG é a proporção de acertos dessas questões; 
+\item 2 (duas) questões discursivas, cuja correção leva em consideração o conteúdo, com peso de 80\%, e aspectos referentes à Língua Portuguesa com peso de 20\% distribuídos da seguinte maneira: Aspectos Ortográficos (30\%); Aspectos textuais (20\%); e Aspectos morfossintáticos e vocabulares (50\%). A Nota das questões discursivas de Formação Geral é a média simples das notas das duas questões discursivas.
+\end{itemize}
+
+
+A nota de Formação Geral é a média ponderada das duas notas, Objetiva e Discursiva, com pesos de 60\% e 40\%, respectivamente.
+
+O Componente de Conhecimento Específico é constituído por: 
+
+\begin{itemize}
+\item 27 (vinte e sete) questões objetivas, com peso idêntico. Assim, a nota das questões de conhecimento específico é a proporção de acertos destas questões; 
+\item 3 (três) questões discursivas nas quais 100\% da nota referem-se ao conteúdo. A nota das questões discursivas de Conhecimento Específico é a média simples das notas dessas 3 questões. 
+\end{itemize}
+
+\newpage
+A nota de Conhecimento Específico é a média ponderada das duas notas, Objetiva e Discursiva, com pesos iguais a, respectivamente, 15\% e 85\%.
+
+As notas dos dois Componentes, de Formação Geral e de Conhecimento Específico, são então arredondadas à primeira casa decimal. Para a obtenção da nota final do estudante, as notas dos dois componentes foram ponderadas por pesos proporcionais ao número de questões: 25,0\% para o Componente de Formação Geral e 75,0\% para o Componente de Conhecimento Específico. Esta nota foi também arredondada a uma casa decimal.
+
+
+Desta forma o presente trabalho tem o objetivo de Mensurar o Desempenho (proficiência) dos Estudantes dos Cursos de Computação da UFPA na Prova do ENADE em 2017, por meio da Teoria da Resposta ao Item (TRI), indicando perspectivas de uso dos resultados para o aprimoramento do Projeto Político Pedagógico da Faculdade de Computação.
+
+No presente estudo, busca-se, modelar a probabilidade de acertos das questões (itens) que compõem a prova, considerando-se a proficiência do estudante a partir da dificuldade e capacidade de discriminação dos itens e da probabilidade de acerto casual. Por permitir uma avaliação do conhecimento efetivamente dominado pelo estudante em cada item, esta iniciativa possibilita intervenções e ações pontuais de correção no processo de ensino-aprendizagem, de modo a identificar lacunas que compreendam possíveis deficiências de aprendizagem.
+
+Espera-se, portanto, contribuir com a área de educação em diversos cursos com a busca de instrumentos alternativos para aferição da situação atual do ensino superior no Pará, consubstanciada na avaliação do desempenho acadêmico dos estudantes (proficiência), de modo a avaliar, detalhadamente, a situação encontrada em cada tipo de conhecimento que integra os componentes dos cursos em análise.  
+
+
+
+\section{TRABALHOS CORRELATOS} \label{sec:firstpage}
+No Brasil, alguns trabalhos abordaram a Teoria da Resposta ao Item (TRI) para avaliação de proficiência com dados do ENADE. Oliveira (2006) utilizou a TRI para proceder a uma análise das propriedades psicométricas da prova do ENADE de 2004, aplicada aos alunos dos cursos de medicina. Nogueira (2008) aplicou a TRI para avaliar as questões da prova de formação geral do ENADE de 2004 e 2005, a fim de estimar a proficiência dos estudantes e o ajuste dos itens ao modelo de Rasch.
+
+Primi et al. (2010) aplicaram a TRI a dados do ENADE de Psicologia, de 2006, para determinar os pontos de corte, formando grupos de competências requeridas para a resolução de itens, evidenciando que, de maneira geral, os estudantes concluintes concentram-se na competência mínima. Primi, Hutz e Silva (2011) realizaram análise psicométrica dos itens empregando os modelos Rasch e de créditos parciais na prova do ENADE de Psicologia de 2006.
+
+Por sua vez, Coelho (2014) utilizou três conjuntos de dados, dentre eles respostas do curso de Estatística do ENADE de 2009 via Teoria da Resposta ao Item. Também Coelho, Ribeiro Junior e Bonat (2014) analisaram respostas do ENADE 2009 de Estatística via Teoria da Resposta ao Item.
+
+Conforme Scher et al. (2014) analisaram a prova do ENADE de 2009 do curso de Administração por meio da TRI. Lopes e Vendramini (2015) avaliaram as propriedades psicométricas da prova de Pedagogia do ENADE, aplicada no ano de 2005, com o modelo de Rasch da TRI.
+
+Camargo et al. (2016) mensuraram a proficiência dos estudantes do curso de Ciências Contábeis no ENADE utilizando TRI, demonstrando que os itens da prova representaram um alto grau de dificuldade para os estudantes e, em geral, os estudantes apresentaram proficiências muito baixas.
+
+Figueiró e Mozzaquatro (2017) analisaram os microdados do Enade de 2014, para avaliar o desempenho dos estudantes do curso de Ciência da
+Computação do Estado do Rio Grande do Sul, bem como foram feitas comparações para
+agrupar as instituições públicas e privadas do mesmo estado de acordo com seus
+desempenhos.
+
+
+Em 2018, Lima et al., desenvolveram uma metodologia para classificação das questões do ENADE em temas. Araujo(2019), desenvolveu uma ferramenta web com dados de todos os cursos do Enade 2017, utilizando algoritimo de machine learning, para classificar as notas dos alunos por desempenho.
+
+Charão et al. (2020) avaliou o desempenhos dos alunos de Ciência da Computação da UFSM, na prova do Enade (2005 a 2017), explorando os resultados para subsidiar e reunir contribuições para a revisão do projeto pedagógico do curso. Cunha et al. (2021) desenvolvel uma análise automática com os microdados do Enade(2005 a 2017) para o curso de Ciência da Computação, tornando possível a geração de resultados para qualquer curso de computação do País.
+\vskip0.3cm
+
+\section{REVISÃO DE LITERATURA} \label{sec:firstpage}
+\subsection{Teoria de Resposta ao Item - TRI}
+
+A Teoria de Resposta ao Item foi sendo desenvolvida aos poucos desde os anos 1950 por vários autores, embora suas raízes remontem a mais de uma década anterior. Dentre os precursores se encontram os trabalhos de Richar (1936), comparando os parâmetros dos itens obtidos pela Teoria Clássica da Psicometria com os moldes que hoje usam a TRI; os trabalhos de Lawley (1943, 1944), indicando alguns métodos para estimar os parâmetros dos itens, os quais se afastam da teoria clássica e os trabalhos de Tucker (1946), que parece ter sido o primeiro a utilizar a expressão curva característica do item (ICC), sendo um conceito chave na TRI. Também deve ser mencionada a contribuição de Lazersfeld (1950), que introduziu o conceito de traço latente, ainda que no contexto da medida das atitudes, conceito que se constitui num parâmetro importante da nova TRI.
+
+Entretanto, o responsável mais direto que deu origem a TRI moderna é Frederic Lord (1952, 1953), o primeiro a desenvolver o modelo unidimensional de 2 e 3 parâmetros, baseado na distribuição normal acumulada (ogiva normal). Posteriormente, Birnbaum (1968) substituiu, em ambos os modelos, a função ogiva normal pela função logística, matematicamente mais conveniente, pois é uma função explícita dos parâmetros do item e de habilidade e não envolve integração.
+
+Na Dimanarca o psicometrista, Georg Rasch (1960) propôs o modelo unidimensional de 1 parâmetro, expresso também como modelo de ogiva normal e, também mais tarde descrito por um modelo logístico por Wright (1968). 
+
+Samegima (1969, 1972) propôs o modelo de resposta gradual com o objetivo de obter mais informação das respostas dos indivíduos do que simplesmente se eles deram respostas corretas ou incorretas aos itens, ou seja, elaborou modelos para tratar respostas poliatômicas e mesmo para dados contínuos.
+
+Bock \& Zimowski (1997) introduziram os modelos logísticos de 1, 2 e 3 parâmetros para duas ou mais populações de respondentes. Em 1970, Bock & Lieberman introduziram o método da máxima verossimilhança marginal para a estimação dos parâmetros em duas etapas. Na primeira etapa estimam-se os parâmetros dos itens, assumindo-se certa distribuição para as habilidades. Na segunda etapa, assumindo os parâmetros dos itens conhecidos, estimam-se as habilidades.
+
+Nas últimas décadas, a TRI vem tornando-se a técnica predominante no campo de testes em vários países. Aqui no Brasil, a TRI foi usada pela primeira vez em 1995 na análise dos dados do Sistema Nacional de Ensino Básico-SAEB. A introdução da TRI permitiu que os desempenhos de alunos de 4a. e 8ª. séries do Ensino Fundamental e de 3a. série do Ensino Fundamental pudessem ser comparados e colocados em uma escala única de conhecimento
+
+
+A Teoria da Resposta ao Item (TRI) é um conjunto de modelos matemáticos que procuram representar a probabilidade de um indivíduo dar certa resposta a um item como função dos parâmetros do item e da habilidade (ou habilidades) do respondente. Essa relação é sempre expressa de tal forma que quanto maior a habilidade, maior a probabilidade de acerto no item (ANDRADE et al., 2000).
+
+A mensuração do desempenho foi desenvolvida por meio da Teoria de Resposta ao Item em que foi construída uma escala para avaliação dos níveis de proficiência dos alunos no Enade/2017. Nessa forma de mensuração, todos os itens que compõem o instrumento de avaliação (prova) são colocados em uma mesma escala de medida da proficiência. Por meio dessa escala, foi possível posicionar todos os itens que compuseram a prova em níveis “âncora” para a realização de interpretações acerca do desempenho requerido no exame.
+
+Os vários Modelos da TRI propostos pela literatura dependem fundamentalmente de alguns fatores(ANDRADE et al, 2000):\vskip0.3cm
+
+\begin{itemize}
+\item Natureza do Item: Dicotômico e Não Dicotômico;
+\item Nº de Populações Envolvidas: Apenas Uma ou Mais de Uma;
+\item Nº de Traços Latentes que está sendo medida: Apenas um ou Mais de Um.
+\end{itemize}
+
+
+Neste estudo, é utilizado um modelo unidimensional, representado pelo traço latente \textbf{Conhecimento em Curso de Graduação}, considera-se uma única população, isto é, os alunos de Graduação em Computação que realizaram a prova Enade 2017; e utilizam-se itens dicotomizados.\vskip0.3cm
+
+
+\newpage
+
+O Modelo Logístico de 3 parâmetros é representado de acordo com a seguinte equação:
+
+\begin{equation}
+    P(U_{ij}=1|\theta_{j})= c_{i}+(1-c_{i})\frac{1}{1+e^{-Da_{i}(\theta_{j}-b_{i})}}
+\end{equation}
+\vskip0.3cm
+
+\begin{itemize}
+\item $U_{ij}$ é uma variável dicotômica que assume os valores 1, quando o indivíduo $j$ responde corretamente o item $i$, ou 0 quando o indivıduo $j$ não responde
+corretamente ao item $i$.
+\item $\theta_{j}$ representa a habilidade (traço latente) do j-ésimo indivíduo.
+\item $b_{i}$ é o parâmetro de \textbf{dificuldade} (ou de posição) do item $i$, medido na mesma
+escala da habilidade.
+\item $a_{i}$ é o parâmetro de \textbf{discriminação} (ou de inclinação) do item $i$, com valor
+proporcional a inclinação da Curva Caracter´ıstica do Item — CCI no
+ponto $b_{i}$.
+\item $c_{i} $é o parâmetro do item que representa a probabilidade de indivíduos
+com baixa habilidade responderem corretamente o item $i$ (muitas vezes
+referido como a probabilidade de acerto casual ou \textbf{chute}.
+\item $D$ é um \textbf{fator de escala}, constante e igual a 1. Utiliza-se o valor 1,7 quando deseja-se que a função logística forneça resultados semelhantes ao da
+função ogiva normal.
+\item $P(U_{ij}=1|\theta_{j})$ é a probabilidade de um indivíduo $j$ com habilidade $\theta_{j}$ responder corretamente o item $i$ e é chamada de Função de Resposta do Item – FRI.
+\end{itemize}
+
+
+Itens com valores excessivamente baixos no parâmetro $a_{i}$ indicam um baixo poder de discriminação, isto é, a probabilidade do indivíduo com baixa proficiência responder corretamente ao item é a mesma de um indivíduo com alta proficiência. Em geral, é esperado, conforme a escala utilizada (0,1), que para um item possuir boa discriminação, ele apresente um parâmetro ai maior que 1. Por outro lado, valores baixos para esse parâmetro indicam que o item possui baixo poder de discriminação, em que estudantes com habilidades diferentes têm praticamente a mesma probabilidade de acertar o item (Andrade et al., 2000).
+
+
+Quanto maior o valor de $b{i}$, mais difícil é o item, e vice-versa ou seja, assim, apenas aqueles indivíduos com proficiência mais alta é que terão maior probabilidade de acertá-lo, e é conhecido também como parâmetro de localização, uma vez que é o parâmetro que auxilia a verificação da posição do item na escala de proficiência (Scher et al., 2014).
+
+O seu valor $c_{i}$  representa a quantidade de alternativas que compõem o item. Assim, para um item composto por cinco alternativas, em que a probabilidade teórica de acerto de um indivíduo assinalar qualquer uma das alternativas é 0,2, pode-se estabelecer uma margem de tolerância (acima e abaixo de 0,2), em que a resposta fornecida pelo estudante poderia ser considerada como apenas um acerto casual e, não, o domínio do conhecimento do item. Desse modo, espera-se que o parâmetro ci assume um valor entre 0,1 e 0,3 (Scher et al., 2014).
+
+
+
+
+\section{MATERIAL E MÉTODOS}
+
+\subsection{População e Amostra}
+\label{sec:metmodal}
+
+A população do estudo é constituída pelos alunos regularmente matriculados nos cursos de graduação em Ciência da Computação e Sistema de Informação da UFPA no Pará, que fizeram a prova do ENADE em 2017.\vskip0.3cm
+
+
+\subsection{Coleta de Dados}
+
+Foi realizado o download dos microdados do Enade por meio do site do INEP
+para o ano de 2017. Esses arquivos contêm dados referentes a todos os alunos que realizaram o Enade naquele ano. Assim, foi necessário extrair os dados referentes aos alunos do curso de Bacharelado em Ciência da Computação e Sistemas de Informação, usando informações contidas nos próprios microdados, identificando área, e subárea conforme o caso, do curso do aluno. 
+
+Os Microdados são compostos por um arquivo compactado(zip) em duas pastas, o \textbf{LEIA-ME} e \textbf{IMPUTS}. A pasta LEIA-ME, possui três arquivos: o Manual do Usuário; o Questionário do Estudante, e o Dicionário de 137 Variáveis e o código com Relação dos Municípios. A pasta IMPUTS, contém quatro arquivos: os microdados com extensão .txt; os scripts de leitura para os arquivos em formatos: .R (Software R), .SAS (Software SAS) e .SAVE (Software IBM-.
+
+O microdado pode ser convertido em formato de tabela ou \textit{Dataframe}. As linhas contêm os dados de cada aluno que realizou a prova e as colunas formam o conjunto de dados(variáveis) coletados ou gerados referente a um exame do Enade, em um ano específico.
+
+
+As planilhas disponibilizadas pelo INEP apresentam uma coluna com um vetor para cada aluno, que
+indica a correção da parte objetiva das questões do componente específico no exame, onde cada posição do vetor refere-se a um item. Tais posições do vetor equivalem ao número de cada item. O número da questão no exame identifica sua posição no vetor. O vetor pode ser preenchido por 4 diferentes valores, expressando as seguintes informações: 0 = errado, 1 = correto, 8 = anulado pela comissão, 9 = anulado pelo índice de discriminação. Quando um aluno não responde a uma determinada questão, sua resposta é considerada errada, portanto, 0 é atribuído à
+questão.
+
+\subsection{Classificação dos Itens por Conteúdos Curriculares}
+
+Para realizar análises sobre um histórico de provas, é necessário adotar uma classificação comum para os conteúdos curriculares abordados nas 35 questões objetivas da prova do Enade. No quais os conteúdos são baseados nas diretrizes curriculares nacionais para os cursos de graduação, mas a cada edição estes são agrupados de forma diferente pelas comissões assessoras do INEP. Com isso, as cinco edições do exame para os cursos na area de computação, houve variação no agrupamento dos conteúdos de formação espefícica: 15 tópicos (2005 e 2008), 21 em (2011) e 17 em 2014 e 2017 (CHARÃO et al., 2020).
+
+Para escolha de uma classificação para os itens, foi utilizado como referência o trabalho de Charão et al, (2020), tomando-se por referência as 17 categorias de conteúdos de formação específica do último exame em 2017 e 2014. Para os exames de 2005, 2008 e 2011, um especialista realizou manualmente a categorização de cada questão em até três temas, com base nas categorias do ENADE do 2017. 
+
+
+
+\subsection{Recursos Computacionais}
+\label{sec:metbet}
+
+Para mensuração do desempenho (proficiência) dos estudantes no ENADE foi implementada um script no software R-Project versão 4.2 (R DEVELOPMENT CORE TEAM, 2020) e um ambiente de desenvolvimento integrado chamado Rstudio versão 1.1.47 com uso dos pacotes: mirt (CHALMERS, 2012), ltm (RIZOPOULOS, 2006), irtoys (PARTCHEV, 2010), Shiny (CHANG et al., 2017), plotly (SIEVERT et al., 2016), leaflet (CHENG et al., 2016), utilizando um Modelo Logístico de 1, 2 e 3 parâmetros (ML1P, ML2P, ML3P) via Teoria da Resposta ao Item e espacializando os resultados em painéis de dados.
+
+
+O software R é uma linguagem e um ambiente para computação estatística no formato de projeto de software livre de código aberto (open source), ou seja, pode ser utilizado sem custos de licença. Há versões para Windows, MacOS, GNU/Linux e Unix. Pode ser baixado da Internet pelo site do Comprehensive R Archive Network (CRAN) - Rede Completa de Arquivos do R - no endereço: http://www.r-project.org. Possui uma extensa coleção de pacotes adicionais, também gratuitos. É resultado de um esforço colaborativo mundial de vários pesquisadores, tais como estatísticos e engenheiros de software, que constituem o Core Team, equipe responsável pela avaliação e atualizações semestrais de novos pacotes (KATAOKA et al., 2008).
+
+%Foi criado uma conta no Repositório Open-Source chamado $Github$, para armazenar os scripts de %análise dos dados referentes ao ENADE(2005 A 2017). Todo o projeto pode ser encontrado em: %\url{https://github.com/MarioDhiego/TCC_SISTEMAS_INFORMACAO_UFPA}.
+
+
+
+\subsection{Mensuração do Desempenho}
+\subsubsection{Prova do Enade}
+\label{sec:MET}
+
+A prova do Enade/2017 é composta de questões discursivas e objetivas (tanto de conhecimentos gerais, como de conhecimentos específicos). Ao todo são 40 (quarenta) questões, divididas em 10 (dez) questões de formação geral (duas discursivas e oito de múltipla escolha) e 30 (trinta) de conhecimentos específicos (três discursivas e vinte e sete de múltipla escolha).\vskip0.3cm
+
+Posteriormente, os microdados coletados foram dicotomizados, ou seja, como as respostas dos microdados disponibilizados pelo INEP são apresentadas na forma de alternativas A, B, C, D ou E, estas foram comparadas ao gabarito. Assim, as respostas corretas receberam o valor 1(um) e as respostas erradas foram substituídas por 0(zero). 
+
+Para o estudo foram consideradas, exclusivamente, as questões objetivas, ou seja 35(trinta e cinco) questões (oito de formação geral e vinte e sete de conhecimento específico), e avaliadas pelo Modelo Logístico Unidimensional de 2 e 3 parâmetros (ML2P e ML3P) da Teoria da Resposta ao Item.
+
+
+\subsubsection{Modelo de Mensuração da TRI}
+
+A mensuração do desempenho foi desenvolvida por meio da Teoria da Resposta ao Item (TRI) em que foi construída uma esca-la para avaliação dos níveis de proficiência dos alunos no Enade-2017. Nessa forma de mensuração, todos os itens que compõem o instrumento de avaliação (prova) são colocados em uma mesma escala de medida da proficiência.
+
+A estimação dos parâmetros dos modelos baseados na Teoria da Resposta ao Item foi realizada pelo Método de Máxima Verossimilhança Marginal, com a aplicação conjunta de um processo interativo chamado de algoritmo Newton-Raphson ou Scoring de Fisher, conforme Andrade et al. (2000).\vskip0.3cm
+
+Para a comparações entre os modelos gerados utilizou-se o Teste da Razão de Verossimilhança por meio da Anova e os critérios AIC (Akaike Information Criterion) e BIC (Bayesian Information Criterion), além de serem produzidos os gráficos com as Curvas Características do Item, Curvas de Informação do Item, Função de Informação Total do Teste.\vskip0.3cm
+
+
+
+
+
+
+
+\section{RESULTADOS E DISCUSSÕES}
+\subsection{Análise dos Itens via TCT}
+
+Em avaliação educacional, a Teoria Clássica dos Testes(TCT) tem como elemento central a prova como um todo e seus resultados são expressos em escore bruto, ou seja, no número total ou no percentual de itens respondidos corretamente. As propriedades psicométricas dos itens de uma prova relacionam-se aos parâmetros a seguir: índice de difculdade, índice de discriminação e correlação bisserial (BORGATTO \& ANDRADE, 2012).
+
+A análise do funcionamento de cada questão (item) em relação ao grupo de alunos respondentes, possibilita: 
+
+\begin{itemize}
+    \item Medir a qualidade e o funcionamento da questão;
+    \item Verificar problemas teoricos-técnicos da avaliação/questões; 
+    \item Traçar um perfil do aprendizado do grupo;
+    \item Verificar o nível de dificuldade da questão em relação aqueles grupo.
+\end{itemize} 
+ 
+
+A elaboração de uma questão de múltipla escolha, que seleciona bem os sujeitos, está fortemente ligada a capacidade de se criar distratores atrativos e eficientes. Cada alternativa tem a função de ser efetiva e atraente a fim de garantir porcentagens de escolha dentre o grupo ao qual a prova foi submetida. As alternativas erradas (os distratores) deverão ser escolhidas pelo grupo inferior, assim, espera-se que a alternativa correta seja esolhida por Alta quantidade de pessoas que se destacam no grupo superior.    
+
+Parte do pressuposto de que o indivíduo que acertar mais itens detém maior capacidade cognitiva em relação ao indivíduo que erra mais. Disso, supõe-se que quem sabe mais terá notas (escore) mais alto do que quem sabe menos. A quantidade de sujeitos que escolha cada alternativa é o determina a eficiência (ou não) da questão como um todo e de cada opção de resposta.  
+
+Apresenta-se, alguns dados importantes para a compreenção da posterior análise das prova do ENADE para o curso de Computação em 2017, de acordo com as tabelas a seguir.
+
+
+
+
+%\newpage
+\begin{table}[h]
+	\centering
+	\caption{Percentual de Resposta por tipo de alternativa na Prova do ENADE/2017, para o Curso de Computação da UFPA.}
+\begin{tabular}{l|c|c|c|c|c|c}
+\hline\hline 
+Categorias   & Itens/Gab    & (A)   & (B)   & (C)   & (D)   & (E) \\
+\hline\hline
+               & 01(C)      & 12.5  &  16.7 & 36.1  & 19.4  & 13.9  \\
+               & 02(C)      & 9.7   &  2.8  & 61.1  & 13.9  & 11.1   \\
+               & 03(B)      & 19.4  &  44.4 & 16.7  & 9.7   & 11.1  \\
+               & 04(B)      & 4.2   &  72.2 & 5.6   & 9.7   & 6.9  \\
+               & 05(C)      & 1.4   &  6.9  & 68.1  & 5.6   & 16.7   \\
+               & 06(E)      & 2.8   &  0.0  & 2.8   & 6.9   & 86.1  \\
+               & 07(A)      & 45.8  &  18.1 & 11.1  & 19.4  & 4.2 \\
+Formação Geral & 08(D)      & 0.0   &  4.2  & 12.5  & 61.1  & 20.8 \\
+               & Desconsiderada      &    &   &  &  &  \\
+               & Desconsiderada      &   &   &  &  &  \\
+               & 11(A)      & 15.3  &  11.1 & 26.4  & 11.1  & 33.3 \\
+               & 12(C)      & 4.2   &  4.2  & 23.6  & 25.0  & 1.4 \\
+               & 13(E)      & 5.6   &  29.2 & 11.1  & 11.1  & 41.7 \\
+         & (Anulada)      &       &       &       &       &  \\
+               & 15(A)      & 48.6  &  16.7 & 25.0  & 8.3   & 0.0 \\
+               & 16(D)      & 4.2   &  2.8  &  2.8  & 83.3  & 1.4 \\
+               & 17(B)      & 4.2   &  72.2 &  11.1 & 8.3   & 2.8 \\
+               & 18(B)      & 27.8  &  26.4 &  15.3 & 22.2  & 6.9 \\
+               & 19(B)      & 2.8   &  61.1 &  23.6 & 4.2   & 6.9 \\
+               & 20(E)      & 6.9   &  15.3 &  16.7 & 15.3  & 44.4 \\
+Componente Específico    
+               & 21(B)      & 16.7  &  26.4 &  16.7 & 26.4  & 12.5 \\
+               & 22(D)      & 1.4   &  15.3 &  1.4  & 41.7  & 38.9 \\
+               & 23(D)      & 4.2   &  13.9 &  18.1 & 54.2  & 8.3 \\          
+               & 24(B)      & 13.9  &  23.6 &  27.8 & 18.1  & 15.3 \\
+               & Desconsiderada      &       &       &       &       &       \\
+               & 26(E)      & 12.5  &  11.1 &  13.9 &  13.9 & 47.2 \\              
+               & 27(A)      & 59.7  &  6.9  &  13.9 &  4.2  & 13.9 \\
+               & 28(E)      & 27.8  &  12.5 &  12.5 &  12.5 & 33.3 \\
+               & Desconsiderada      &       &       &       &       &  \\
+               & 30(C)      & 5.6   &  25.0 &  48.6 &  9.7  & 9.7 \\
+               & 31(B)      & 8.3   &  38.9 &  22.2 &  16.7 & 12.5 \\
+               & 32(D)      & 16.7  &  13.9 &  13.9 &  34.7 & 19.4 \\
+               & 33(C)      & 2.8   &  2.8  &  88.9 &  2.8  & 1.4 \\
+               & 34(C)      & 2.8   &  31.9 &  47.2 &  9.7  & 6.9 \\
+               & 35(C)      & 9.7   &  22.2 &  50.0 &  8.3  & 8.3 \\
+\hline\hline
+\end{tabular}
+\vskip0.2cm
+\begin{flushleft}
+\ \ \ \ \ \ \ \ \ Fonte: INEP/ENADE-2017
+\end{flushleft}
+\end{table}
+
+
+
+
+
+
+
+\newpage
+
+\begin{table}[!h]
+\centering
+	\caption{Percentual de Acertos por Itens na Prova do Enade/2017 referentes aos alunos matriculados no Curso de Sistemas de Informação na UFPA.}
+\begin{tabular}{l|c|c|c}
+\hline\hline 
+Categorias   & Itens/Gabarito   & Erros  & Acertos  \\
+\hline\hline
+               & 01(C)     & 63.9         & 36.1         \\
+               & 02(C)      & 38.9         & 61.1         \\
+               & 03(B)      & 55.6         & 44.4          \\
+               & 04(B)      & 27.8         & 72.2         \\
+               & 05(C)      & 31.9         & 68.2          \\
+               & 06(E)      & 13.9         & 86.1          \\
+               & 07(A)      & 54.2        & 45.8         \\
+Formação Geral & 08(D)      & 38.9         & 61.1          \\
+               & 09(C)      & 85.21       & 14.79         \\
+               & 10(E)      & 71.60        & 28.40          \\
+               & 11(A)      &  84.7        & 15.3           \\
+               & 12(C)      &  38.9        & 61.1            \\
+               & 13(E)      &  58.3        & 41.7           \\
+               & 14         &  44.9        & 55.03          \\
+               & 15(A)      &  51.4        & 48.6           \\
+               & 16(D)      &  16.7        &  83.3          \\
+               & 17(B)      &  27.8         & 72.2           \\
+               & 18(B)      &  73.6         & 26.4              \\
+               & 19(B)      &  38.9         & 61.1             \\
+               & 20(E)      &  55.6         &  44.4             \\
+Componente Específico    
+               & 21(B)      &  73.6         &  26.4             \\
+               & 22(D)      &  58.3         &  41.7            \\
+               & 23(D)      &  45.8         &  54.2            \\          
+               & 24(B)      &  76.4         &  23.6            \\
+               & 25(B)      &  84.02        & 15.98            \\
+               & 26(E)      &  52.8         &  47.2        \\              
+               & 27(A)      &  40.3         &  59.7            \\
+               & 28(E)      &  66.7         &  33.3            \\
+               & 29(A)      &  82.84        &  17.16           \\
+               & 30(C)      &  51.4         &  48.6            \\
+               & 31(B)      &  61.1         &  38.9            \\
+               & 32(D)      &  65.3         &  34.7            \\
+               & 33(C)      &  11.1         &  88.9            \\
+               & 34(C)      &  52.8         &  47.2            \\
+               & 35(C)      &  50.0         &  50.0            \\
+\hline\hline
+\end{tabular}
+\vskip0.2cm
+\begin{flushleft}
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  Fonte: INEP/ENADE-2017
+\end{flushleft}
+\end{table}
+
+
+
+
+
+O ENADE possui oito questões objetivas de múltipla escolha de Formação Geral (FG) e 27 de Componente Específica (CE), totalizando 35 questões. Destaca-se que 5 itens de CE foram desconsideradas pelo próprio ENADE, logo, não foram computados no escore. Essas questões, 1 foi anulada pela comissão e 4 foram desconsideradas por apresentarem um coeficiente de correlação ponto Bisserial abaixo de 0,19.
+
+
+De acordo com os resultados, verificou-se que, a Proporção de acertos dos itens referentes a prova do Enade em 2017. Dentre as 35 questões avaliadas, somente dois alunos acertaram 62.9\% (22 itens) da prova. 
+
+Nos resultados obtidos pelos respondentes neste teste, observa-se notas variando entre 6 e 22 acertos, de um total de 35 itens. Destaca-se que ocorreu escore nulo (nenhum acertos, somente 2 alunos), como também não existiram respondentes que obtiveram escore total.  
+
+
+As questões aplicadas na Prova do Enade são avaliadas inicialmente quanto ao nível de Facilidade (tabela 4). Para isso, verificar-se o Percentual de acerto de cada questão da prova. A tabela 4 apresenta as classificações de questões segundo o percentual de acertos, considerando como índice de Facilidade. Questões acertadas por 90\% dos estudantes, ou mais, são consideradas muito fáceis. No extremo oposto, questões com percentual de acerto igual ou inferior a 10\% são consideradas muito difíceis.    
+
+As questões objetivas aplicadas, Na prova do Enade devem ter um nível mínimo de poder de discriminação. Para ser considerada apta a avaliar os alunos dos cursos, uma questão deve ser mais acertada por alunos que tiveram bom desempenho do que pelos que tiveram desempenho ruim. 
+
+Um índice que mede essa capacidade das questões e que foi escolhido para ser utilizado no Enade/2017 é o denominado Correlação Ponto-Bisserial, usualmente representado por rpb.
+
+Segundo Rabelo(2013), a correlação Ponto-bisserial é uma associação entre o desempenho do indivíduo no item e no teste como todo, ou seja, com seu escore bruto. Esta medida varia no intervalo (−1; +1) e valores negativos e próximos a zero indicam que indivíduos com maiores notas no teste estão errando o item, ou seja, o item tem baixa discriminação em relação ao resultado do teste. O coeficiente Bisserial indica o quanto cada alternativa atraiu os alunos mais proficientes.
+
+O índice é calculado para cada Área de avaliação e, em separado, para o Componente de Formação Geral e de Conhecimento Específico.
+
+Normalmente, mais de uma questão pode ser eliminada de uma prova pelo critério Ponto-Bisserial. No momento que uma questão é eliminada de uma prova por não apresentar coerência entre o acerto da questão e a nota da prova, esta eliminação afeta obviamente a nota e a relação das demais questões com a nota. 
+
+A eliminação sequencial pode então diminuir o número total de questões eliminadas. O procedimento utilizado foi numa primeira etapa, a eliminação da questão com o menor coeficiente de correlação Ponto-Bisserial e o recálculo da nota da prova e das correlações. Numa segunda etapa, foi verificado se ainda existia alguma questão com coeficiente abaixo do limite estipulado (Tabela 5). Caso positivo, esta questão era também eliminada e as notas e as correlações recalculadas. Este passo era reiterado até que todas as questões remanescentes apresentassem coeficientes de correlação Ponto-Bisserial acima do limite estipulado.
+
+Questões com índice de discriminação fraco, com valores ponto bisserial $≤ 0.19$ são eliminadas do cômputo das notas e da estimação dos parâmetros no Modelo de Teoria da Resposta ao Item, e posteriormente encaminhado para análise pedagógica.
+
+
+
+\begin{table}[!htb]
+	\centering
+	\caption{Descrição dos Escores Brutos para os itens da Prova do Enade/2017, para o Curso de Computação da UFPA.}
+\begin{tabular}{l|c|c|c}
+\hline\hline 
+ Estatística      & Formação Geral     & Componente Especíico  & Nota Bruta  \\
+\hline\hline
+ Nº de Itens      & 8                  & 27                    &  35   \\
+ Média            & 4.2                &  10.6                 &  14.8   \\
+ Mínimo           & 0 item (2 alunos)  & 4 (2 alunos)          & 6 itens (1 aluno)   \\
+ Máximo           & 8 itens (2 alunos) & 18 (1 aluno)          & 22 itens (2 alunos)   \\
+ 1º Quartil(25\%) & 3 itens            & 9                     & 13   \\
+ 3º Quartil(75\%) & 5 itens            &  13                   & 17  \\
+\hline\hline
+\end{tabular}
+\begin{flushleft}
+\ \ \ \ \ \ Fonte: INEP/ENADE-2017
+\end{flushleft}
+\end{table}
+
+
+
+  
+
+
+
+\begin{table}[h]
+	\centering
+	\caption{Distribuição dos itens da Prova do Enade/2017 , para o Curso de Computação da UFPA, em relação ao Ìndice de Dificuldade via TCT.}
+\begin{tabular}{l|c|c|c}
+\hline\hline 
+     Classificação  &           Facilidade & Itens                          & Amostra  \\
+\hline\hline
+ Muito Fácil        & 0.86 ou +            & P6;P33                         &  2 (5.7\% )   \\
+ Fácil              & $0.61 |--- 0.85$     & P2;P4;P5;P8;P12;P16;P17;P19    &  8 (22.9\%)   \\
+ Moderado           & $0.41 |--- 0.60$     & P7;P13;P15;P20;P22;P23;P26;P27 &  12 (34.3\%)   \\
+ Difícil            & $0.16 |--- 0.40$     & P1;P18;P21;P24;P28;P31;P32     &  7 (20\%)   \\
+ Muito Difícil      & $0.00 |--- 0.15$     & P11                            &  1 (2.9\%)   \\
+\hline\hline
+\end{tabular}
+\begin{flushleft}
+\ \ \ Fonte: INEP/ENADE-2017
+\end{flushleft}
+\end{table}
+
+
+
+
+\begin{table}[h]
+	\centering
+	\caption{Distribuição dos itens da Prova do Enade/2017 , para o Curso de Computação da UFPA, em relação ao Ìndice de Discriminação via TCT.}
+\begin{tabular}{l|c|c|c}
+\hline\hline 
+     Classificação  & Discriminação        & Itens                                         & Amostra  \\
+\hline\hline
+ Muito Bom          & $0.40$ ou +          & P15                                           &  1 (2.9\% )   \\
+ Fácil              & $0.30 |--- 0.39$     & P1;P2;P4;P5;P7;P11;P17;P20;P24;P25;P28        &  11 (31\%)   \\
+ Moderado           & $0.20 |--- 0.29$     & P3;P12;P13;P14;P27;P29;P31;P33;P34            &  9 (26\%)   \\
+ Difícil            & $\leq$ 0.19          & P6;P8;P9;P10;P16;P18;P19;P22;P23;P26;P32;P35  &  12 (34\%)   \\
+\hline\hline
+\end{tabular}
+\begin{flushleft}
+\ \ \ Fonte: INEP/ENADE-2017
+\end{flushleft}
+\end{table}
+
+
+\subsection{Análise dos Itens via TRI}
+
+Os modelos de resposta ao item pressupõem que todos os itens medem uma única habilidade. Apesar do desempenho humano ser multi-determinado, uma vez que mais de uma habilidade participa da execução de qualquer tarefa, para satisfazer o postulado da unidimensionalidade do teste, é suficiente admitir que haja um fator dominante responsável pelo desempenho de todos os itens do teste do ENADE.  Este fator dominante refere-se à habilidade supostamente mensurada pelo teste (LORD, 1980; HAMBLETON, 1991).
+
+A segunda suposição destes modelos é a independência local, ou seja, para uma dada habilidade, as respostas de um examinando aos itens do teste são independentes, assim, o aluno não aprende com o teste. Neste contexto, a unidimensionalidade implica a independência local (LORD, 1980; HAMBLETON, 1991, ANDRADE et al, 2010).
+
+A primeira análise empírica dos dados da prova, com o objetivo de verificar que dimensões do construto foram de fato operacionalizadas e avaliadas pela prova, é a Análise Fatorial dos Itens. Essa análise examina a matriz de correlação entre todos os pares de itens e descobre grupos de itens altamente correlacionados entre si. 
+
+Dois itens estão altamente correlacionados quando o estudante que acerta um deles tende a acertar o outro e quando erra um deles tende a errar o outro. Com base nesse fato, podemos inferir que os dois exigem uma mesma competência/habilidade/conteúdo. 
+
+A evidência de validade psicométrica de construto para a prova do ENADE/2017, foi obtida a partir da análise fatorial dos 35 itens que compõem a prova. A medida de adequação da amostra de Kaiser-Meyer-Olkin (KMO) para a análise fatorial, igual a 0.76, indicou um resultado satisfatório.
+
+
+O teste de esfericidade de Bartlett que permite avaliar a hipótese de igualdade de variância-covariância no grupo estudado, isto é, que a matriz de correlação é uma matriz identidade, revelou que existe correlação entre as variáveis estudadas (Hair, Anderson, Tatham \& Black, 2006; Pestana \& Gageiro, 2003). O valor do teste de hipótese para a prova do ENADE foi igual a $\chi^2$ (780) = 1694,2 com significância de $p < 0,001$. 
+
+A partir dos dado, análise da dimensionalidade do conjunto de itens foi realizada através da Análise Fatorial de Informação Completa. 
+
+Com base nos resultados apresentados pode-se afirmar que existe um fator (variável) determinante responsável por 51\% da variabilidade dos dados. Neste sentido, este valores atestam que o instrumento de medida é unidimensional, ou seja, está medindo um único traço latente, o desempenho dos alunos. Assim, a análise comprova a utilização de um modelo unidimensional da TRI, no caso o modelo logístico de 2 ou 3 parâmetrios.
+
+\newpage
+Para a análise dos itens do ENADE, utilizou-se a Teoria da Resposta ao Item, com o método de maxima verossimilhança marginal na estimação dos parâmetros, conjuntamente, a convergência dos dados foi testada pelo algoritmo (Expection Maximization) e Newton Raphson, no intuito de garantir a boa estimação dos parâmetros.
+
+
+
+Quanto à definição da qualidade de um dos 35 itens da prova do ENADE/2017, não existe um critérios único. Em geral, para avaliar a qualidade dos itens os pesquisadores consideram, principalmente, os valores referentes às estimativas dos parâmetros $a_{i}$ e $b_{i}$ e os erros-padrão (EP) destas estimativas.
+
+Na prática, os critérios para avaliar a qualidade do itens acabam sendo mais flexíveis. Desta forma, os pesquisadores da área, em geral, consideram os seguintes critérios para a retirada de itens do processo de estimação:
+
+\begin{itemize}
+\item Correlação Bisserial negativa e menor que 0.19;
+\item Item com 90 a 100\% de acerto ou de erro;
+\item Parâmetro de discriminação menor do que 0,4 (BAKER, 2001);
+\item Erros-padrão referentes aos parâmetros ai e bi maiores que 0,30 (BAKER, 2001).
+\end{itemize}
+
+Critérios para Seleção dos Modelos
+
+Dados dois ou mais modelos ajustados (tabela 6) é necessário que se determine o que melhor explica a variável resposta, se ajustando melhor aos dados da prova do ENADE-2018.
+
+A comparação dos modelos é feita via o Teste de Razão de Verossimilhança e os valores dos critérios de ajuste AIC (Akaike Information Criterion), criado por Akaike (1974) e BIC (Baysian Information Criterion), descrito por Schwarz (1978). 
+
+\begin{table}[h]
+	\centering
+	\caption{Comparação dos Modelos da TRI para a Prova do Enade/2017 referentes aos alunos matriculados no Curso de Computação na UFPA.}
+\begin{tabular}{c|c|c|c|c}
+\hline\hline 
+     Comparação     & Modelos    & AIC       & BIC      & P-valor  \\
+\hline\hline
+ Rasch x MLP2P      &  Rasch     &  9782.76  & 9814.93  & 0.07       \\
+ Rasch x MLP2P      &  MLP2P     &  9569.84  & 9608.81  &            \\
+ \hline
+ Rasch x ML3PL      &  Rasch     &  9582.76  & 9708.81  & 0.49        \\
+ Rasch x ML3PL      &  ML3PL     &  9615.45  & 9983.08  &             \\
+ \hline
+ ML2PL x ML3PL      &  ML2PL     &  9569.84  & 9668.54  &  0.96        \\
+ML2PL x ML3PL       &  ML3PL     &  9615.45  & 9983.08  &               \\
+\hline\hline
+\end{tabular}
+\begin{flushleft}
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Fonte: INEP/ENADE-2017
+\end{flushleft}
+\end{table}
+\vskip0.3cm
+
+Segundos todos Estes critérios o melhor modelo para os dados do ENADE-2017, é o Modelo Logístico de 2 parâmetros, pois ele apresenta os menores valores para os critérios AIC e BIC (tabela 7). As medotologias consideram o ajuste adequado quando $RMSE < 0.05$ e TLI e CFI são maiores que $0.90$ (THIMOTY, 2015).
+
+
+\begin{table}[htp]
+	\centering
+	\caption{Estatísticas de Qualidade do Ajuste dos Modelos da TRI para a Prova do Enade/2017 referentes aos alunos matriculados no Curso de Computação na UFPA.}
+\begin{tabular}{c|c|c|c|c|c|c}
+\hline\hline 
+     Modelos        & $M^{2}$    & G.L  & P-valor & RMSEA  & TLI & CFI  \\
+\hline\hline
+ Rasch              &  632.37    & 560  &  0.03   &  0.047 & 0.70 & 0.71 \\
+ ML2PL              &  582.41    & 594  &  0.01   &  0.021 & 0.86 & 0.87  \\
+ ML3PL              &  706.14    & 525  &  0.04   &  0.024 & 0.79 & 0.80  \\
+\hline\hline
+\end{tabular}
+\begin{flushleft}
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Fonte: INEP/ENADE-2017
+\end{flushleft}
+\end{table}
+
+
+Assim, é realizado a etapa de calibração, ou seja, a estimação dos parâmetros dos itens no modelo logístico de 2 e 3 parâmetros via TRI. 
+
+O processo de estimação dos itens foi realizado em vários passos, estratégia utilizada para manter o maior número possível de itens na prova do ENADE. A qualidade dos itens foi avaliada considerando-se, principalmente, os valores referentes às estimativas dos parâmetros de discriminação e de dificuldade e, ainda, os erros-padrão (EP) destas estimativas.
+
+Depois do primeiro passo, ou seja, após a primeira calibração (estimação) sem a retirada de itens, os parâmetros dos itens foram sendo novamente re-estimados por meio do programa R, que estima conjuntamente os itens e coloca a habilidade numa mesma escala, fazendo com que todos os escores dos alunos sejam comparáveis, por meio do processo de equalização.
+
+A tabela 8 apresenta os parâmetros de discriminação ($a_{i}$), dificuldade ($b_{i}$) dos itens avaliados, com seus respectivos erro-padrão (EP). Tais parâmetros foram estimados no software R com escala 0,1.
+
+\begin{table}[htp]
+	\centering
+	\caption{Estimação dos Parâmetros dos Itens para o Modelo Logístico(ML2PL) da TRI para a Prova do Enade/2017 referentes aos alunos matriculados no Curso de Computação na UFPA.}
+\begin{tabular}{c|c|c}
+\hline\hline 
+  Itens       &  $(a_{i})$       & $(b_{i})$  \\
+\hline\hline
+  Q01         &  0.68            &  -1.99                  \\
+  Q02         &   1.01           &  -1.75                 \\
+  Q03         &   0.41           &  -3.08                 \\
+  Q04         &   1.18           &  -1.09                 \\
+  Q05         &   0.69           &  -1.04                 \\
+  Q06         &   0.39           &  -2.92                  \\
+  Q07         &   0.77           &  -1.79                  \\
+  Q08         &   0.43           &  -4.17                 \\
+  Q09         &   Desconsiderada & Bisserial $< 0.19$   \\
+  Q10         &   Desconsiderada & Bisserial $< 0.19$   \\
+  Q11         &   1.078          &  1.272                  \\
+  Q12         &   0.36           &  -3.464                  \\
+  Q13         &   0.60           &  -3.405                  \\
+  Q14         &   Anulada        &  Pela Comissão     \\
+  Q15         &   1.640          &   - 0.308                 \\
+  Q16         &   0.417          &   0.430                 \\
+  Q17         &   0.441          &   -0.096                \\
+  Q18         &   0.251          &   7.498                 \\
+  Q19         &   0.390          &   4.913                 \\
+  Q20         &   0.534          &    0.212                \\
+  Q21         &   0.740            &  -0.336                  \\
+  Q22         &   0.406            &  6.896                  \\
+  Q23         &   0.546            &  -1.711                  \\
+  Q24         &   0.646            &   -1.193                 \\
+  Q25         &   Desconsiderada   &   Bisserial $< 0.19$                 \\
+  Q26         &   0.175            &    7.142                \\
+  Q27         &   0.501            &   -0.928                 \\
+  Q28         &   0.735            &   1.392                 \\
+  Q29         &   Desconsiderada   &   Bisserial $< 0.19$                  \\
+  Q30         &   0.607            &   -0.160                 \\
+  Q31         &   0.364            &   -1.391                 \\
+  Q32         &   0.085            &   15.433                 \\
+  Q33         &   0.432            &   -0.217                 \\
+  Q34         &   0.453            &   2.857                 \\
+  Q35         &   0.240            &  2.667                \\
+\hline\hline
+\end{tabular}
+\begin{flushleft}
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Fonte: INEP/ENADE-2017
+\end{flushleft}
+\end{table}
+
+Como é possível visualizar na Tabela 8, os parâmetros $a_{i}$  dos itens avaliados, em geral, apresentam-se acima de 0,70. O parâmetro ai indica a discriminação de cada item, quanto maior o valor deste parâmetro, maior é o seu poder de discriminação. Em outras palavras, indica o quanto cada item consegue diferenciar aqueles indivíduos que possuem o conhecimento avaliado daqueles que não o possuem. Os itens com maior poder de discriminação foram os itens: 15, 4, 11 e 2. 
+
+O parâmetros $b_{i}$ representa a dificuldade de cada item, quanto maior seu valor, maior a proficiência necessária dos estudantes para responder a questão. Conforme a tabela 10, os itens que possuem maior grau de dificuldade para os estudantes avaliados foram: 32, 18, 26, 22 e 19. Por outro lado, os itens mais fáceis para os estudantes foram: 08, 13, 12 e 3.
+
+Depois de terminada a fase de calibração dos parâmetros dos itens, é feita a estimação das habilidades dos respondentes. De acordo com a tabela 8 verificou-se que, os itens 9, 10, 14, 25 e 29 foram eliminados do processo de estimação do modelo de desempenho via teoria da resposta ao item.
+
+
+
+
+
+\section{Considerações Finais}
+
+Este estudo teve como objetivo mensurar o desempenho (proficiência) dos estudantes de Computação da UFPA no Enade, por meio da TRI. A partir da estimação realizada com ML2P, decorrente da TRI, foi realizada a mensuração da proficiência dos estudantes de Computação que fizeram a prova Enade/2017 e criada uma escala de medida padronizada.
+
+A análise dos itens (questões) evidenciou a capacidade da prova em mensurar a proficiência dos estudantes dos diferentes níveis de domínio cognitivo exigido pelo exame. Nesse contexto, a TRI demonstrou capacidade de capturar a distribuição da proficiência dos estudantes de Computação ao longo dos níveis exigidos pela prova.
+
+Os resultados da pesquisa apontaram que os itens contidos na prova não apresentou nem o domínio cognitivo compreendido pela escala. Este resultado corrobora  o baixo desempenho dos estudantes apontado pelo relatório do Inep (2017) para esta prova e aponta, espeficicamente, em quais aspectos e conhecimentos podem ser econtrados fragilidades de aprendizagem.
+
+Vale ainda destacar que, enquanto estudos realizados com base na TCT abordam a questão do desempenho de maneira agregada, a análise pela TRI permitiu a identificação pontual dos conhecimentos, capacidades e habilidades exigidas em cada nível da escala. Ao desmembrar a proficiência em níveis, evidenciando os conhecimentos exigidos, é possível uma atuação pontual de professores, IES e respectivas autoridades nas questões específicas em que foram demonstradas deficiências na aprendizagem. 
+
+Dados os benefícios mencionados e apresentados pela TRI neste estudo, pesquisas posteriores, relacionadas a determinantes do desempenho de alunos em Computação poderiam adotar como base para mensuração do desempenho dos estudantes as medidas fornecidas por modelos baseados na TRI. Essa análise possibilitaria estudar determinantes baseados em diferentes níveis de proficiência, contribuindo para o avanço nos estudos relacionados a esta área.
+
+\newpage
+\section{Referências Bibliográficas}
+
+AKAIKE, H. A new look at the statistical model identification. IEEE Transactions on Automatic
+Control., Boston, v.19, n.6, p.716-723, Dec. 1974.
+
+Andrade, D.F., Tavares, H.R., Cunha, R.V. (2000). Teoria da Resposta ao Item: Conceitos e Aplicações. São Paulo: Associação Brasileira de Estatística.
+
+Araújo, R. A. (2019). Análise dos microdados do Enade: proposta de uma ferramenta de exploração utilizando mineração de dados. Dissertação (Mestrado em Ciência da Computação) - Universidade Federal de Goiás, Goiânia.
+
+Birnbaum, A. (1968). Some latent trait models and their use in inferring and examinee's ability. In F.M. Lord \& M.R. Novick, Statistical theories of mental test scores. Reading, MA: Addison-Wesley, ch. 17-20.
+
+Bock, R. D. and Zimowski, M. F. (1997). Multiple Group IRT. In Handbook of Modern Item Response Theory. W.J. van der Linder e R.K. Hambleton Eds. New York: Spring-Verlag.
+
+Baker, F.B.(2001). The basics of item response theory. Washington, DC: ERIC. 
+
+BORGATTO, A. F.; ANDRADE, D. F. de. Análise clássica de testes com diferentes graus de dificuldade. Estudos em Avaliação Educacional, São Paulo, v. 23, n. 52, p. 146–156, 2012.
+
+BRASIL Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira Sinaes. Brasília, 2017. Disponível em: Disponível em: http://portal.inep.gov.br/web/guest/sinaes Acesso em: 14 março. 2022.
+
+CHARÃO, Andrea S.; WIECHORK, Karina; RODRIGUES, Marlon L. S.; BARBOSA, Fernando P.. Explorando Resultados por Questão no Enade em Ciência da Computação para Subsidiar Revisão de Projeto Pedagógico de Curso. In: WORKSHOP SOBRE EDUCAÇÃO EM COMPUTAÇÃO (WEI), 28. , 2020, Cuiabá. Anais [...]. Porto Alegre: Sociedade Brasileira de Computação, 2020 . p. 16-20. ISSN 2595-6175. DOI: https://doi.org/10.5753/wei.2020.11121.
+
+CUNHA, Renan; SALES, Claudomiro; SANTOS, Reginaldo. Análise Automática com os Microdados do ENADE para Melhoria do Ensino dos Cursos de Ciência da Computação. In: WORKSHOP SOBRE EDUCAÇÃO EM COMPUTAÇÃO (WEI),29., 2021, Evento Online. Anais [...]. Porto Alegre: Sociedade Brasileira de Computação, 2021 . p. 208-217. ISSN 2595-6175. DOI: https://doi.org/10.5753/wei.2021.15912.
+
+Camargo, R. V. W., Camargo, R. de C. C. P., Andrade, D. F. de, \& Bornia, A. C. (2016). Desempenho dos alunos de ciências contábeis na prova ENADE/2012: uma aplicação da Teoria da Resposta ao Item. Revista De Educação E Pesquisa Em Contabilidade (REPeC), 10(3). https://doi.org/10.17524/repec.v10i3.140.
+
+Coelho, E. C., Ribeiro Junior, P. J. \& Bonat, W. H. (2014). Exame nacional de desenvolvimento de estudantes de estatística-desafios e perspectivas pela TRI. Revista da Estatística da Universidade Federal de Ouro Preto, 3(2), pp. 323-337.
+
+\newpage
+Chalmers, R., P. (2012). mirt: A Multidimensional Item Response Theory Package for the R Environment. Journal of Statistical Software, 48(6), 1-29. doi: 10.18637/jss.v048.i06.
+
+CHENG, J. et al. Leaflet: Create Interactive Web Maps with the JavaScript ’Leaflet’. Library. 2016. Disponível em: . Acesso em: 03 out. 2016.
+
+CHANG, W. et al. Shiny: Web Application Framework for R. 2017. Disponível em. Acesso em: 10 mar. 2017.
+
+Everitt, B.S, Hothorn (2011). MVA: An Introduction to applied Multivariate Analysis with R.
+
+Hambleton, R.K., Swaminathan, H., Rogers, H.J. (1991). Fundamentals of Item Response Theory. Newburry Park: Sage Publications.
+
+Hair, J., Black, W., Babin, B., Anderson, R. e Tatham, R. (2006) Análise de Dados Multivariados. 6ª Edição, Pearson Prentice Hall, Upper Saddle River.
+
+Joanes, D.N. and Gill, C.A (1998). Comparing measures of sample skewness and kurtosis. The Statistician, 47, 183-189.
+
+KATAOKA, V. Y. et al. O uso do r no ensino de probabilidade na educação básica: Animation e teachingdemos (the use of r in probability teaching at basic education: Animation and teaching demos). Proc. 18o Simpósio Nacional de Probabilidade e Estatística, São Paulo, 2008.
+
+Lawley, D.N. (1943). On problems connected with item selection and test construction. Proceedings of the Royal Society of Edinburgh, Series A, 61, 273-287. 
+
+Lawley, D.N. (1944). The factorial analysis of multiple item tests. Proceedings of the Royal Society of Edinburgh, 62-A, 74-82. 
+
+Lazarsfeld, P.F. (1950). The logical and mathematical foundation of latent structure analysis. In S.A. Stauffer, L. Guttman, E.A. Suchman, P.F. Lazarsfeld, S.A. Star, \& J.A. Clausen (Eds.), Measurement and prediction. Princeton, NJ: Princeton University Press, 1950.
+
+Lord, F.M. (1952). A theory of test scores (Psychometric Monograph No. 7). Iowa City, IA: Psychometric Society.
+
+Lord, F.M. (1953). The relation of test score to the trait underlying the test. Educational and Psychological Measurement, 13, 517-549.
+
+Lord, F.M., Norvick, M.R. (1968). Statistical Theories of Mental Test Score. Reading: Addison-Wesley.
+
+Lord, F.M. (1980). Applications of Item Response Theory to Practical Testing Problems. Hillsdale: Lawrence Erlbaum Associates.
+
+Lima, P. D. S., Ambrosio, A. P., Brancher, J. D., and Felix, I. (2018). Sysenade-analise
+das questoes de provas do enade organizadas pelos temas abordados. In Anais dos
+Workshops do Congresso Brasileiro de Informatica na Educação, volume 7, page 419.
+
+MARDIA, K. V. Measures of multivariate skewness and kurtosis with applications. Biometrika, 57(3):pp. 519-30, 1970.
+
+MARDIA, K. V. Assessment of multinormality and the robustness of Hotelling s T 2 test. Applied Statistics, London, v. 24, n. 2, p. 163-171, 1975.
+
+NOGUEIRA, S. O. ENADE: Analise de itens de formação geral e de estatística pela TRI. Dissertação de Mestrado, Programa de PósGraduação em Psicologia, Universidade São Francisco, Itatiba, 2008.
+
+PASQUALI, L. Psicometria: teoria dos testes na psicologia e na educação. Petrópolis: Vozes, 2003.
+
+Pestana, MH, \& Gageiro, JG (2003). Análise de dados para ciências sociais: A complementaridade de SPSS [Data Analysis for Social Sciences: The Complementarity of SPSS] (3ª ed.). Lisboa: Edições Silabo.
+
+PASQUALI, L. TRI - Teoria de Resposta ao Item: teoria, procedimentos e aplicações. Brasília: LabPAM/UnB, 2007.
+
+PRIMI, Ricardo et al. Análise do funcionamento diferencial dos itens do Exame Nacional do Estudante (Enade) de Psicologia de 2006. Psico-USF, São Paulo, SP, v. 15, n. 3, p. 379-393, 2010. 
+
+PRIMI, R.; HUTZ, C. S.; SILVA, M. C. R. A prova do ENADE de psicologia 2006: concepção, construção e análise psicométrica da prova. Avaliação Psicológica, v. 10, n. 3, p. 271-294, 2011.
+
+Rasch, G. (1960, 1980). Probabilistic models for some intelligence and attainment tests. Chicago, IL: MESA Press.
+
+Rizopoulos, D. (2006). ltm: An R package for latent variable modelling and item response theory analyses. Journal of Statistical Software, 17(5), 1–25. URL http://www.jstatsoft.org/v17/ i05/.
+
+RABELO, M. Avaliação Educacional: Fundamentos, Metodologia e Aplicações no Contexto Brasileiro. Rio de Janeiro. SBM, 2013.
+
+Revelle, W. (2019). psych: Procedures for Psychological, Psychometric, and Personality Research. Northwestern University, Evanston, Illinois. R package version 1.9.12.
+
+R DEVELOPMENT CORE TEAM. R: A Language and Environment for Statistical Computing, 2022. R Foundation for Statistical Computing. Vienna, Austria. ISBN: 3-90005107-0. 
+
+RSTUDIO. RStudio: Integrated development environment for R (Versão 4.2.2) [Computer software]. Boston, MA. 
+
+Samejima, R. (1969). Estimation of latent ability using a response pattern of graded scores (Psychometric Monograph No. 17). Psychometric Society. 
+
+Samejima, F. (1972). A general model for tree-response data (Psychometric Monograph, No. 18). Psychometric Society. 
+
+SCHWARZ, G. Estimating the dimensional of a model. Annals of Statistics, Hayward, v.6, n.2,
+p.461-464, Mar. 1978.
+
+Shipley, Bill. 2004. Cause and Correlation in Biology: A User’S Guide to Path Analysis, Structural Equations and Causal Inference. Vol. 20. 2001.
+
+SCHER, V. T. et al. Uma aplicação da teoria da resposta ao item na avaliação do ENADE do curso de Administração. XIV Colóquio Internacional de Gestão Universitária, Florianópolis-SC, 3 a 5 de dezembro de 2014.
+
+SIEVERT, C. et al. Plotly: Create Interactive Web Graphics via plotly.js. 2021. Disponível em: Acesso em: 03 fev. 2021.
+
+Tucker, L.R. (1946). Maximum validity of a test with equivalent items. Psychometrika, 11, 1-13. 
+
+THIMOTY, A. B. Confirmatory factor analysis for applied research. 2. ed. New York: The Guilford Press, 2015.
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
