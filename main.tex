@@ -13,7 +13,7 @@
 \usepackage{multicol}
 
 \sloppy
-\title{Mensuração do Desempenho (\textit{proficiência}) dos Estudantes de Sistemas de Informação da UFPA, na Prova do ENADE-2017 via Teoria da Resposta ao Item}
+\title{Mensuração do Desempenho (\textit{proficiência}) dos Estudantes de Sistemas de Informação da UFPA, na Prova do ENADE-2017 via Teoria de Resposta ao Item}
 
 \author{Mário D. R. Valente\inst{1}, Salomâo Salim\inst{1}, Rafaela Vasconcelos\inst{1}, Dionne C. Monteiro\inst{2} }
 
@@ -36,91 +36,26 @@
 \end{abstract}
 
 \begin{resumo} 
-Este estudo teve como objetivo mensurar o desempenho (proficiência) dos estudantes de Computação matriculados na UFPA, que realizaram o Enade por meio da Teoria da Resposta ao Item (TRI). A mensuração do desempenho dos estudantes foi realizada, utilizando-se o modelo logístico de dois parâmetros (ML2P), com dados extraídos do site do Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep) relativos à prova Enade em 2017, contemplando 235 estudantes. A escala elaborada permitiu discriminar os estudantes em três níveis de desempenho. Os resultados apontaram também que os itens contidos na prova ENADE representaram um alto grau de dificuldade para o grupo que realizou a prova, no qual os alunos da UFPA possuem baixo desempenho nos temas de Inteligência Artificial, Teoria da Computação, e Banco de Dados. Este resultado sugere que são necessárias ações das IES e políticas públicas capazes de contribuir para melhoria do desempenho apresentado pelos estudantes.
+Este estudo teve como objetivo mensurar o desempenho (proficiência) dos estudantes de Sistemas de Informação matriculados na UFPA, que realizaram o Enade via Teoria de Resposta ao Item (TRI). A mensuração do desempenho dos estudantes foi realizada, utilizando-se o modelo logístico de três parâmetros (ML3P), com dados extraídos do site do (Inep) relativos à prova Enade em 2017, contemplando 235 estudantes. A escala elaborada permitiu discriminar os estudantes em três níveis de desempenho. Os resultados apontaram também que os itens contidos na prova ENADE representaram um alto grau de dificuldade para o grupo que realizou a prova, no qual os alunos da UFPA possuem baixo desempenho nos temas de Probabilidade, Programação, Inteligência Artificial, Teoria da Computação, e Banco de Dados. Este resultado sugere que são necessárias ações da IES e políticas públicas capazes de contribuir para melhoria do desempenho apresentado pelos estudantes.
   
 \noindent
   \textbf{Palavras-chave}: Desempenho, Proficiência, ENADE, Teoria de Resposta ao Item.
 \end{resumo}
 
-
+\newpage
 \section{INTRODUÇÃO}
 
-O Exame Nacional de Desempenho dos Estudantes (ENADE) é um dos pilares da avaliação dos Sistema Nacional de Avaliação da Educação Superior (SINAES), criado pela Lei nº 10.861, de 14 de abril de 2004. Além do ENADE, os processos de avaliação de Cursos de Graduação e de Avaliação Institucional constituem o Tripé avaliativo do SINAES, os resultados desses instrumentos avaliativos, reunidos, permitem conhecer, em profundidade, o modo de funcionamento e a qualidade dos cursos e instituições de Educação Superior (IES) de todo o Brasil.
+O Exame Nacional de Desempenho dos Estudantes (ENADE) é um dos pilares da avaliação dos Sistema Nacional de Avaliação da Educação Superior (SINAES), criado pela Lei nº 10.861, de 14 de abril de 2004. 
 
 O ENADE é uma prova aplicada anualmente aos alunos (ingressantes e concluintes) de cursos de graduação, em áreas definidas pelo Ministério da Educação e é realizado pelo INEP. O Enade é atualmente, o único instrumento oficial que avalia os resultados do processo de ensino aprendizagem e tem um peso significativo no desempenho das Instituições de Nível Superior no Brasil(BRASIL, 2017).
 
-O objetivo do Enade é o acompanhamento do processo de aprendizagem e do desempenho acadêmico dos estudantes em relação aos conteúdos programáticos previstos nas diretrizes curriculares do respectivo curso de graduação, suas habilidades para ajustamento às exigências decorrentes da evolução do conhecimento e suas competências para compreender temas exteriores ao âmbito específico de sua profissão, ligados à realidade brasileira e mundial e a outras áreas do conhecimento(BRASIL, 2017).
+A Prova do ENADE (2017), com duração total de 4 (quatro) horas, apresentou um componente de avaliação na Formação Geral (FG), comum aos cursos de todas as áreas e um Componente Específico (CE) de Cada Área. 
 
+No componente de avaliação da Formação Geral, foram consideradas as seguintes características integrantes do perfil profissional, como sua formação ética, humanista e voltadas ao exercício da cidadania. A parte referente ao Componente Específico contribui com 75\% da nota final, enquanto a parcela, referente a Formação Geral, contribui com 25\%, em consonância com o número de questões da prova, 30 e 10, respectivamente. Os conceitos utilizados no ENADE variam de 1 a 5, e, à medida que esse valor aumenta, melhor terá sido o desempenho no exame.
 
-A Prova do ENADE (2017), com duração total de 4 (quatro) horas, apresentou um componente de avaliação na Formação Geral (FG), comum aos cursos de todas as áreas e um Componente Específico (CE) de Cada Área. O ENADE foi operacionalizado por meio de uma prova, do Questionário de Percepção sobre a prova e o Questionário do Estudante.
+A nota final do estudante no Enade é obtida pela média ponderada na qual a parte de Formação Geral responde por 25\%, e a parte de conhecimento específico, por 75\%. A nota de Conhecimento Específico é a média ponderada das duas notas, Objetiva e Discursiva, com pesos iguais a, respectivamente, 15\% e 85\% e arredondada a uma casa decimal.
 
-
-No componente de avaliação da Formação Geral, foram consideradas as seguintes características integrantes do perfil profissional:
-
-
-\begin{itemize}
-    \item Ético e comprometido com as questões sociais, culturais e ambientais;
-    \item Humanista e crítico, apoiado em conhecimentos científico, social e cultural, historicamente construídos, que transcendam a área de sua formação; 
-    \item Protagonista do saber, com visão do mundo em sua diversidade para práticas de multiletramentos, voltadas para o exercício da cidadania;
-    \item Proativo, solidário, autônomo e consciente na tomada de decisões, considerando o contexto situacional;
-    \item Colaborativo e propositivo no trabalho em equipes, grupos e redes, atuando com respeito, cooperação, iniciativa e responsabilidade social.”
-\end{itemize}
-	 
-
-	  
-
-No Componente de Formação Geral, de acordo com o art. 6º da Portaria Inep mº444, 
-de 30 de maio de 2017, foram verificadas as seguintes competências:
-
-\begin{itemize}
-\item Fazer escolhas éticas e responsabilizar-se por suas conseqüências; 
-\item Promover diálogo e práticas de convivência, compartilhando saberes e conhecimentos; 
-\item Trabalhar em equipe, de forma flexível e colaborativa; 
-\item Buscar soluções viáveis e inovadoras na resolução de situações-problema;
-\item Organizar, interpretar e sintetizar informações para tomada de decisões; 
-\item Planejar e elaborar projetos de ação e intervenção a partir da análise de necessidades, de forma coerente, em contextos diversos; 
-\item Compreender as linguagens e suas respectivas variações como expressão das diferentes manifestações étnico-culturais;
-\item Identificar representações verbais, gráficas e numéricas de um mesmo significado; 
-\item Formular e articular argumentos e contra-argumentos consistentes em situações sociocomunicativas;
-\item Ler, interpretar e produzir textos com clareza e coerência.”
-\end{itemize}
-
-O cálculo do conceito ENADE é realizado para cada curso das Intistuições Brasileiras, enquadrado em uma área de abrangência no ENADE. A nota final do curso depende do desempenho dos estudantes concluintes no componente de conhecimento específico e no componente de formação geral.
-
-A parte referente ao Componente Especifico contribui com 75\% da nota final, enquanto a parcela, referente a Formação Geral, contribui com 25\%, em consonância com o número de questões da prova, 30 e 10, respectivamente. Os conceitos utilizados no ENADE variam de 1 a 5, e, à medida que esse valor aumenta, melhor terá sido o desempenho no exame.
-
-A nota final do estudante no Enade é obtida pela média ponderada na qual a parte de Formação Geral responde por 25\%, e a parte de conhecimento específico, por 75\%.
-
-
-O Componente de Formação Geral (FG) é assim constituído por: 
-
-\begin{itemize}
-\item 8 (oito) questões objetivas com peso idêntico, perfazendo 100\%. Assim, a nota bruta das questões objetivas de FG é a proporção de acertos dessas questões; 
-\item 2 (duas) questões discursivas, cuja correção leva em consideração o conteúdo, com peso de 80\%, e aspectos referentes à Língua Portuguesa com peso de 20\% distribuídos da seguinte maneira: Aspectos Ortográficos (30\%); Aspectos textuais (20\%); e Aspectos morfossintáticos e vocabulares (50\%). A Nota das questões discursivas de Formação Geral é a média simples das notas das duas questões discursivas.
-\end{itemize}
-
-
-A nota de Formação Geral é a média ponderada das duas notas, Objetiva e Discursiva, com pesos de 60\% e 40\%, respectivamente.
-
-O Componente de Conhecimento Específico é constituído por: 
-
-\begin{itemize}
-\item 27 (vinte e sete) questões objetivas, com peso idêntico. Assim, a nota das questões de conhecimento específico é a proporção de acertos destas questões; 
-\item 3 (três) questões discursivas nas quais 100\% da nota referem-se ao conteúdo. A nota das questões discursivas de Conhecimento Específico é a média simples das notas dessas 3 questões. 
-\end{itemize}
-
-\newpage
-A nota de Conhecimento Específico é a média ponderada das duas notas, Objetiva e Discursiva, com pesos iguais a, respectivamente, 15\% e 85\%.
-
-As notas dos dois Componentes, de Formação Geral e de Conhecimento Específico, são então arredondadas à primeira casa decimal. Para a obtenção da nota final do estudante, as notas dos dois componentes foram ponderadas por pesos proporcionais ao número de questões: 25,0\% para o Componente de Formação Geral e 75,0\% para o Componente de Conhecimento Específico. Esta nota foi também arredondada a uma casa decimal.
-
-
-Desta forma o presente trabalho tem o objetivo de Mensurar o Desempenho (proficiência) dos Estudantes dos Cursos de Computação da UFPA na Prova do ENADE em 2017, por meio da Teoria da Resposta ao Item (TRI), indicando perspectivas de uso dos resultados para o aprimoramento do Projeto Político Pedagógico da Faculdade de Computação.
-
-No presente estudo, busca-se, modelar a probabilidade de acertos das questões (itens) que compõem a prova, considerando-se a proficiência do estudante a partir da dificuldade e capacidade de discriminação dos itens e da probabilidade de acerto casual. Por permitir uma avaliação do conhecimento efetivamente dominado pelo estudante em cada item, esta iniciativa possibilita intervenções e ações pontuais de correção no processo de ensino-aprendizagem, de modo a identificar lacunas que compreendam possíveis deficiências de aprendizagem.
-
-Espera-se, portanto, contribuir com a área de educação em diversos cursos com a busca de instrumentos alternativos para aferição da situação atual do ensino superior no Pará, consubstanciada na avaliação do desempenho acadêmico dos estudantes (proficiência), de modo a avaliar, detalhadamente, a situação encontrada em cada tipo de conhecimento que integra os componentes dos cursos em análise.  
-
+Desta forma o presente trabalho tem o objetivo de Mensurar o Desempenho (proficiência) dos Estudantes dos Cursos de Sistemas de Informação da UFPA na Prova do ENADE em 2017, por meio da Teoria da Resposta ao Item (TRI), indicando perspectivas de uso dos resultados para o aprimoramento do Projeto Político Pedagógico da Faculdade de Computação.
 
 
 \section{TRABALHOS CORRELATOS} \label{sec:firstpage}
@@ -315,57 +250,6 @@ Apresenta-se, alguns dados importantes para a compreenção da posterior anális
 
 
 
-%\newpage
-\begin{table}[h]
-	\centering
-	\caption{Percentual de Resposta por tipo de alternativa na Prova do ENADE/2017, para o Curso de Computação da UFPA.}
-\begin{tabular}{l|c|c|c|c|c|c}
-\hline\hline 
-Categorias   & Itens/Gab    & (A)   & (B)   & (C)   & (D)   & (E) \\
-\hline\hline
-               & 01(C)      & 12.5  &  16.7 & 36.1  & 19.4  & 13.9  \\
-               & 02(C)      & 9.7   &  2.8  & 61.1  & 13.9  & 11.1   \\
-               & 03(B)      & 19.4  &  44.4 & 16.7  & 9.7   & 11.1  \\
-               & 04(B)      & 4.2   &  72.2 & 5.6   & 9.7   & 6.9  \\
-               & 05(C)      & 1.4   &  6.9  & 68.1  & 5.6   & 16.7   \\
-               & 06(E)      & 2.8   &  0.0  & 2.8   & 6.9   & 86.1  \\
-               & 07(A)      & 45.8  &  18.1 & 11.1  & 19.4  & 4.2 \\
-Formação Geral & 08(D)      & 0.0   &  4.2  & 12.5  & 61.1  & 20.8 \\
-               & Desconsiderada      &    &   &  &  &  \\
-               & Desconsiderada      &   &   &  &  &  \\
-               & 11(A)      & 15.3  &  11.1 & 26.4  & 11.1  & 33.3 \\
-               & 12(C)      & 4.2   &  4.2  & 23.6  & 25.0  & 1.4 \\
-               & 13(E)      & 5.6   &  29.2 & 11.1  & 11.1  & 41.7 \\
-         & (Anulada)      &       &       &       &       &  \\
-               & 15(A)      & 48.6  &  16.7 & 25.0  & 8.3   & 0.0 \\
-               & 16(D)      & 4.2   &  2.8  &  2.8  & 83.3  & 1.4 \\
-               & 17(B)      & 4.2   &  72.2 &  11.1 & 8.3   & 2.8 \\
-               & 18(B)      & 27.8  &  26.4 &  15.3 & 22.2  & 6.9 \\
-               & 19(B)      & 2.8   &  61.1 &  23.6 & 4.2   & 6.9 \\
-               & 20(E)      & 6.9   &  15.3 &  16.7 & 15.3  & 44.4 \\
-Componente Específico    
-               & 21(B)      & 16.7  &  26.4 &  16.7 & 26.4  & 12.5 \\
-               & 22(D)      & 1.4   &  15.3 &  1.4  & 41.7  & 38.9 \\
-               & 23(D)      & 4.2   &  13.9 &  18.1 & 54.2  & 8.3 \\          
-               & 24(B)      & 13.9  &  23.6 &  27.8 & 18.1  & 15.3 \\
-               & Desconsiderada      &       &       &       &       &       \\
-               & 26(E)      & 12.5  &  11.1 &  13.9 &  13.9 & 47.2 \\              
-               & 27(A)      & 59.7  &  6.9  &  13.9 &  4.2  & 13.9 \\
-               & 28(E)      & 27.8  &  12.5 &  12.5 &  12.5 & 33.3 \\
-               & Desconsiderada      &       &       &       &       &  \\
-               & 30(C)      & 5.6   &  25.0 &  48.6 &  9.7  & 9.7 \\
-               & 31(B)      & 8.3   &  38.9 &  22.2 &  16.7 & 12.5 \\
-               & 32(D)      & 16.7  &  13.9 &  13.9 &  34.7 & 19.4 \\
-               & 33(C)      & 2.8   &  2.8  &  88.9 &  2.8  & 1.4 \\
-               & 34(C)      & 2.8   &  31.9 &  47.2 &  9.7  & 6.9 \\
-               & 35(C)      & 9.7   &  22.2 &  50.0 &  8.3  & 8.3 \\
-\hline\hline
-\end{tabular}
-\vskip0.2cm
-\begin{flushleft}
-\ \ \ \ \ \ \ \ \ Fonte: INEP/ENADE-2017
-\end{flushleft}
-\end{table}
 
 
 
@@ -373,58 +257,7 @@ Componente Específico
 
 
 
-\newpage
 
-\begin{table}[!h]
-\centering
-	\caption{Percentual de Acertos por Itens na Prova do Enade/2017 referentes aos alunos matriculados no Curso de Sistemas de Informação na UFPA.}
-\begin{tabular}{l|c|c|c}
-\hline\hline 
-Categorias   & Itens/Gabarito   & Erros  & Acertos  \\
-\hline\hline
-               & 01(C)     & 63.9         & 36.1         \\
-               & 02(C)      & 38.9         & 61.1         \\
-               & 03(B)      & 55.6         & 44.4          \\
-               & 04(B)      & 27.8         & 72.2         \\
-               & 05(C)      & 31.9         & 68.2          \\
-               & 06(E)      & 13.9         & 86.1          \\
-               & 07(A)      & 54.2        & 45.8         \\
-Formação Geral & 08(D)      & 38.9         & 61.1          \\
-               & 09(C)      & 85.21       & 14.79         \\
-               & 10(E)      & 71.60        & 28.40          \\
-               & 11(A)      &  84.7        & 15.3           \\
-               & 12(C)      &  38.9        & 61.1            \\
-               & 13(E)      &  58.3        & 41.7           \\
-               & 14         &  44.9        & 55.03          \\
-               & 15(A)      &  51.4        & 48.6           \\
-               & 16(D)      &  16.7        &  83.3          \\
-               & 17(B)      &  27.8         & 72.2           \\
-               & 18(B)      &  73.6         & 26.4              \\
-               & 19(B)      &  38.9         & 61.1             \\
-               & 20(E)      &  55.6         &  44.4             \\
-Componente Específico    
-               & 21(B)      &  73.6         &  26.4             \\
-               & 22(D)      &  58.3         &  41.7            \\
-               & 23(D)      &  45.8         &  54.2            \\          
-               & 24(B)      &  76.4         &  23.6            \\
-               & 25(B)      &  84.02        & 15.98            \\
-               & 26(E)      &  52.8         &  47.2        \\              
-               & 27(A)      &  40.3         &  59.7            \\
-               & 28(E)      &  66.7         &  33.3            \\
-               & 29(A)      &  82.84        &  17.16           \\
-               & 30(C)      &  51.4         &  48.6            \\
-               & 31(B)      &  61.1         &  38.9            \\
-               & 32(D)      &  65.3         &  34.7            \\
-               & 33(C)      &  11.1         &  88.9            \\
-               & 34(C)      &  52.8         &  47.2            \\
-               & 35(C)      &  50.0         &  50.0            \\
-\hline\hline
-\end{tabular}
-\vskip0.2cm
-\begin{flushleft}
-\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  Fonte: INEP/ENADE-2017
-\end{flushleft}
-\end{table}
 
 
 
@@ -456,25 +289,6 @@ Questões com índice de discriminação fraco, com valores ponto bisserial $≤
 
 
 
-\begin{table}[!htb]
-	\centering
-	\caption{Descrição dos Escores Brutos para os itens da Prova do Enade/2017, para o Curso de Computação da UFPA.}
-\begin{tabular}{l|c|c|c}
-\hline\hline 
- Estatística      & Formação Geral     & Componente Especíico  & Nota Bruta  \\
-\hline\hline
- Nº de Itens      & 8                  & 27                    &  35   \\
- Média            & 4.2                &  10.6                 &  14.8   \\
- Mínimo           & 0 item (2 alunos)  & 4 (2 alunos)          & 6 itens (1 aluno)   \\
- Máximo           & 8 itens (2 alunos) & 18 (1 aluno)          & 22 itens (2 alunos)   \\
- 1º Quartil(25\%) & 3 itens            & 9                     & 13   \\
- 3º Quartil(75\%) & 5 itens            &  13                   & 17  \\
-\hline\hline
-\end{tabular}
-\begin{flushleft}
-\ \ \ \ \ \ Fonte: INEP/ENADE-2017
-\end{flushleft}
-\end{table}
 
 
 
@@ -482,45 +296,11 @@ Questões com índice de discriminação fraco, com valores ponto bisserial $≤
 
 
 
-\begin{table}[h]
-	\centering
-	\caption{Distribuição dos itens da Prova do Enade/2017 , para o Curso de Computação da UFPA, em relação ao Ìndice de Dificuldade via TCT.}
-\begin{tabular}{l|c|c|c}
-\hline\hline 
-     Classificação  &           Facilidade & Itens                          & Amostra  \\
-\hline\hline
- Muito Fácil        & 0.86 ou +            & P6;P33                         &  2 (5.7\% )   \\
- Fácil              & $0.61 |--- 0.85$     & P2;P4;P5;P8;P12;P16;P17;P19    &  8 (22.9\%)   \\
- Moderado           & $0.41 |--- 0.60$     & P7;P13;P15;P20;P22;P23;P26;P27 &  12 (34.3\%)   \\
- Difícil            & $0.16 |--- 0.40$     & P1;P18;P21;P24;P28;P31;P32     &  7 (20\%)   \\
- Muito Difícil      & $0.00 |--- 0.15$     & P11                            &  1 (2.9\%)   \\
-\hline\hline
-\end{tabular}
-\begin{flushleft}
-\ \ \ Fonte: INEP/ENADE-2017
-\end{flushleft}
-\end{table}
 
 
 
 
-\begin{table}[h]
-	\centering
-	\caption{Distribuição dos itens da Prova do Enade/2017 , para o Curso de Computação da UFPA, em relação ao Ìndice de Discriminação via TCT.}
-\begin{tabular}{l|c|c|c}
-\hline\hline 
-     Classificação  & Discriminação        & Itens                                         & Amostra  \\
-\hline\hline
- Muito Bom          & $0.40$ ou +          & P15                                           &  1 (2.9\% )   \\
- Fácil              & $0.30 |--- 0.39$     & P1;P2;P4;P5;P7;P11;P17;P20;P24;P25;P28        &  11 (31\%)   \\
- Moderado           & $0.20 |--- 0.29$     & P3;P12;P13;P14;P27;P29;P31;P33;P34            &  9 (26\%)   \\
- Difícil            & $\leq$ 0.19          & P6;P8;P9;P10;P16;P18;P19;P22;P23;P26;P32;P35  &  12 (34\%)   \\
-\hline\hline
-\end{tabular}
-\begin{flushleft}
-\ \ \ Fonte: INEP/ENADE-2017
-\end{flushleft}
-\end{table}
+
 
 
 \subsection{Análise dos Itens via TRI}
@@ -564,48 +344,12 @@ Dados dois ou mais modelos ajustados (tabela 6) é necessário que se determine 
 
 A comparação dos modelos é feita via o Teste de Razão de Verossimilhança e os valores dos critérios de ajuste AIC (Akaike Information Criterion), criado por Akaike (1974) e BIC (Baysian Information Criterion), descrito por Schwarz (1978). 
 
-\begin{table}[h]
-	\centering
-	\caption{Comparação dos Modelos da TRI para a Prova do Enade/2017 referentes aos alunos matriculados no Curso de Computação na UFPA.}
-\begin{tabular}{c|c|c|c|c}
-\hline\hline 
-     Comparação     & Modelos    & AIC       & BIC      & P-valor  \\
-\hline\hline
- Rasch x MLP2P      &  Rasch     &  9782.76  & 9814.93  & 0.07       \\
- Rasch x MLP2P      &  MLP2P     &  9569.84  & 9608.81  &            \\
- \hline
- Rasch x ML3PL      &  Rasch     &  9582.76  & 9708.81  & 0.49        \\
- Rasch x ML3PL      &  ML3PL     &  9615.45  & 9983.08  &             \\
- \hline
- ML2PL x ML3PL      &  ML2PL     &  9569.84  & 9668.54  &  0.96        \\
-ML2PL x ML3PL       &  ML3PL     &  9615.45  & 9983.08  &               \\
-\hline\hline
-\end{tabular}
-\begin{flushleft}
-\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Fonte: INEP/ENADE-2017
-\end{flushleft}
-\end{table}
-\vskip0.3cm
+
 
 Segundos todos Estes critérios o melhor modelo para os dados do ENADE-2017, é o Modelo Logístico de 2 parâmetros, pois ele apresenta os menores valores para os critérios AIC e BIC (tabela 7). As medotologias consideram o ajuste adequado quando $RMSE < 0.05$ e TLI e CFI são maiores que $0.90$ (THIMOTY, 2015).
 
 
-\begin{table}[htp]
-	\centering
-	\caption{Estatísticas de Qualidade do Ajuste dos Modelos da TRI para a Prova do Enade/2017 referentes aos alunos matriculados no Curso de Computação na UFPA.}
-\begin{tabular}{c|c|c|c|c|c|c}
-\hline\hline 
-     Modelos        & $M^{2}$    & G.L  & P-valor & RMSEA  & TLI & CFI  \\
-\hline\hline
- Rasch              &  632.37    & 560  &  0.03   &  0.047 & 0.70 & 0.71 \\
- ML2PL              &  582.41    & 594  &  0.01   &  0.021 & 0.86 & 0.87  \\
- ML3PL              &  706.14    & 525  &  0.04   &  0.024 & 0.79 & 0.80  \\
-\hline\hline
-\end{tabular}
-\begin{flushleft}
-\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Fonte: INEP/ENADE-2017
-\end{flushleft}
-\end{table}
+
 
 
 Assim, é realizado a etapa de calibração, ou seja, a estimação dos parâmetros dos itens no modelo logístico de 2 e 3 parâmetros via TRI. 
