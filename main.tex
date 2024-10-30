@@ -13,7 +13,7 @@
 \usepackage{multicol}
 
 \sloppy
-\title{Mensuração do Desempenho (\textit{proficiência}) dos Estudantes de Sistemas de Informação da UFPA, na Prova do ENADE-2017 via Teoria de Resposta ao Item}
+\title{Mensuração do Desempenho (\textit{proficiência}) dos Estudantes do Curso de Bacharelado em Sistemas de Informação, na Prova do ENADE/2017 via Teoria de Resposta ao Item}
 
 \author{Mário D. R. Valente\inst{1}, Dionne C. Monteiro\inst{2}, Heliton R. Tavares \inst{3}}
 
@@ -33,21 +33,21 @@ Professor Dr., Faculdade de Estatística - Universidade Federal do Pará(UFPA)\\
 \maketitle
 
 \begin{abstract}
- This study aimed to measure the performance (proficiency) of Computing students enrolled at UFPA, who took the Enade through Item Response Theory (IRT). The measurement of student performance was carried out using the two-parameter logistic model (ML2P), with data extracted from the website of the National Institute of Educational Studies and Research Anísio Teixeira (Inep) related to the Enade test in 2017, covering 235 students . The elaborated scale allowed to discriminate the students in three levels of performance. The results also showed that the items contained in the ENADE test represented a high degree of difficulty for the group that took the test, in which UFPA students have low performance in the subjects of Artificial Intelligence, Computing Theory, and Database. This result suggests that actions by HEI and public policies capable of contributing to improving the performance presented by students are necessary.
+ This study aimed to measure the performance (proficiency) of Computing students enrolled at UFPA, who took the Enade through Item Response Theory (IRT). The measurement of student performance was carried out using the tree-parameter logistic model (ML3P), with data extracted from the website of the National Institute of Educational Studies and Research Anísio Teixeira (Inep) related to the Enade test in 2017, covering 235 students . The elaborated scale allowed to discriminate the students in three levels of performance. The results also showed that the items contained in the ENADE test represented a high degree of difficulty for the group that took the test, in which UFPA students have low performance in the subjects of Artificial Intelligence, Computing Theory, and Database. This result suggests that actions by HEI and public policies capable of contributing to improving the performance presented by students are necessary.
   
 \noindent
   \textbf{Keywords}: Performance, Proficiency, ENADE, Item Response Theory.
 \end{abstract}
 
 \begin{resumo} 
-Este estudo teve como objetivo mensurar o desempenho (proficiência) dos estudantes de Sistemas de Informação matriculados na UFPA, que realizaram o Enade via Teoria de Resposta ao Item (TRI). A mensuração do desempenho dos estudantes foi realizada, utilizando-se o modelo logístico de três parâmetros (ML3P), com dados extraídos do site do (Inep) relativos à prova Enade em 2017, contemplando 235 estudantes. A escala elaborada permitiu discriminar os estudantes em três níveis de desempenho. Os resultados apontaram também que os itens contidos na prova ENADE representaram um alto grau de dificuldade para o grupo que realizou a prova, no qual os alunos da UFPA possuem baixo desempenho nos temas de Probabilidade, Programação, Inteligência Artificial, Teoria da Computação, e Banco de Dados. Este resultado sugere que são necessárias ações da IES e políticas públicas capazes de contribuir para melhoria do desempenho apresentado pelos estudantes.
+Este estudo teve como objetivo mensurar o desempenho (proficiência) dos estudantes de Sistemas de Informação matriculados na UFPA, que realizaram o Enade via Teoria de Resposta ao Item (TRI). A mensuração do desempenho dos estudantes foi realizada, utilizando-se o modelo logístico de três parâmetros (ML3P), com dados extraídos do site do (Inep) relativos à prova Enade em 2017, contemplando 11.503 estudantes. A escala elaborada permitiu discriminar os estudantes em três níveis de desempenho. Os resultados apontaram também que os itens contidos na prova ENADE representaram um alto grau de dificuldade para o grupo que realizou a prova, no qual os alunos da UFPA possuem baixo desempenho nos temas de Probabilidade, Programação, Inteligência Artificial, Teoria da Computação, e Banco de Dados. Este resultado sugere que são necessárias ações da IES e políticas públicas capazes de contribuir para melhoria do desempenho apresentado pelos estudantes.
   
 \noindent
   \textbf{Palavras-chave}: Desempenho, Proficiência, ENADE, Teoria de Resposta ao Item.
 \end{resumo}
 
 \newpage
-\section{INTRODUÇÃO}
+\section{Introdução}
 
 O Exame Nacional de Desempenho dos Estudantes (ENADE) é um dos pilares da avaliação dos Sistema Nacional de Avaliação da Educação Superior (SINAES), criado pela Lei nº 10.861, de 14 de abril de 2004. 
 
@@ -62,7 +62,7 @@ A nota final do estudante no Enade é obtida pela média ponderada na qual a par
 Desta forma o presente trabalho tem o objetivo de Mensurar o Desempenho (proficiência) dos Estudantes nos Cursos de Sistemas de Informação da UFPA na Prova do ENADE em 2017, por meio da Teoria de Resposta ao Item (TRI), indicando perspectivas de uso dos resultados para o aprimoramento do Projeto Político Pedagógico da Faculdade de Computação.
 
 
-\section{TRABALHOS CORRELATOS} \label{sec:firstpage}
+\section{Trabalho Correlatos} \label{sec:firstpage}
 No Brasil, alguns trabalhos abordaram a Teoria da Resposta ao Item (TRI) para avaliação de proficiência com dados do ENADE. Oliveira (2006) utilizou a TRI para proceder a uma análise das propriedades psicométricas da prova do ENADE de 2004, aplicada aos alunos dos cursos de medicina. Nogueira (2008) aplicou a TRI para avaliar as questões da prova de formação geral do ENADE de 2004 e 2005, a fim de estimar a proficiência dos estudantes e o ajuste dos itens ao modelo de Rasch.
 
  Primi, Hutz e Silva (2011) realizaram análise psicométrica dos itens empregando os modelos Rasch e de créditos parciais na prova do ENADE de Psicologia de 2006.
@@ -78,19 +78,19 @@ desempenhos.
 
 Em 2018, Lima et al., desenvolveram uma metodologia para classificação das questões do ENADE em temas. Araujo(2019), desenvolveu uma ferramenta web com dados de todos os cursos do Enade 2017, utilizando algoritimo de machine learning, para classificar as notas dos alunos por desempenho.
 
-Charão et al. (2020) avaliaram o desempenhos dos alunos de Ciência da Computação da UFSM, na prova do Enade (2005 a 2017), explorando os resultados para subsidiar e reunir contribuições para a revisão do projeto pedagógico do curso. Cunha et al. (2021) desenvolvel uma análise automática com os microdados do Enade(2005 a 2017) para o curso de Ciência da Computação, tornando possível a geração de resultados para qualquer curso de computação do País.
+Charão et al. (2020) avaliaram o desempenhos dos alunos de Ciência da Computação da UFSM, na prova do Enade (2005 a 2017), explorando os resultados para subsidiar e reunir contribuições para a revisão do projeto pedagógico do curso. 
 
-Cunha et al. (2021) desenvolveram uma ferramenta de análise de dados automática com os microdados do Enade (2005 a 201) para Ciência da Computação da UFPA, via linguagem de programação Python.
+Cunha et al. (2021) desenvolveram uma ferramenta de análise de dados automática com os microdados do Enade (2005 a 201) para o curso de Ciência da Computação da UFPA, via linguagem de programação Python.
 
-
-\section{MATERIAL E MÉTODOS}
-\subsection{População e Amostra}
-\label{sec:metmodal}
-
-A população do estudo é constituída pelos alunos regularmente matriculados nos cursos de graduação em Sistemas de Informação, que fizeram a prova do ENADE em 2017.\vskip0.3cm
+Rendeiro et al, (2022) analisou o desenpenho dos estudantes de engenharia da computação da UFPA com base nos dados do Enade (2014,2017 e 2019).
 
 
-\subsection{Coleta de Dados}
+
+
+\section{Material e Métodos}
+\subsection{População e Coleta de Dados}
+
+A população do estudo é constituída pelos alunos regularmente matriculados nos cursos de graduação em Sistemas de Informação, que fizeram a prova do ENADE em 2017. 
 
 Foi realizado o download dos microdados com extensão .txt por meio do site do INEP, e as respostas corretas receberam o valor 1(um) e as respostas erradas foram substituídas por 0(zero). Para o estudo foram consideradas, exclusivamente, as questões objetivas, ou seja 35(trinta e cinco) questões (oito de formação geral e vinte e sete de conhecimento específico).
 
@@ -99,7 +99,7 @@ Foi realizado o download dos microdados com extensão .txt por meio do site do I
 
 Para mensuração do desempenho (proficiência) dos estudantes no ENADE foi implementada um script no software R-Project versão 4.4 (R DEVELOPMENT CORE TEAM, 2020) e um ambiente de desenvolvimento integrado chamado Rstudio versão 1.1.47 com uso dos pacotes: mirt (CHALMERS, 2012), ltm (RIZOPOULOS, 2006), irtoys (PARTCHEV, 2010), utilizando um Modelo Logístico de 3 parâmetros (ML3P) via Teoria de Resposta.
 
-\subsection{Classificação dos Itens}
+\subsection{Classificação dos Itens por Conteúdos Curriculares}
 
 Para realizar análises sobre um histórico de provas, é necessário adotar uma classificação comum para os conteúdos curriculares abordados nas 35 questões objetivas da prova do Enade. No quais os conteúdos são baseados nas diretrizes curriculares nacionais para os cursos de graduação, mas a cada edição estes são agrupados de forma diferente pelas comissões assessoras do INEP. Com isso, as cinco edições do exame para os cursos na area de computação, houve variação no agrupamento dos conteúdos de formação espefícica: 15 tópicos (2005 e 2008), 21 em (2011) e 17 em 2014 e 2017 (CHARÃO et al., 2020).
 
@@ -113,6 +113,7 @@ A mensuração do desempenho foi desenvolvida por meio da Teoria da Resposta ao 
 \section{RESULTADOS E DISCUSSÕES}
   
 Nos resultados obtidos pelos respondentes neste teste, observa-se notas variando entre 0 e 30 acertos, de um total de 35 itens. Destaca-se que ocorreu escore nulo (nenhum acertos, somente 284 alunos), como também não existiram respondentes que obtiveram escore total.  
+
 
 \begin{table}[htb]
 	\centering
@@ -130,6 +131,28 @@ Nos resultados obtidos pelos respondentes neste teste, observa-se notas variando
 \hline\hline
 \end{tabular}
 \end{table}
+
+
+\begin{table}[htb]
+	\centering
+	\caption{Medidas Estatísticas referentes as \textbf{Nota Bruta Geral} para os itens da Prova do Enade/2017 referentes aos alunos matriculados nos curso de Sistemas de Informação no Brasil (\textbf{n=11.523}).}
+\begin{tabular}{l|c|c|c}
+\hline\hline 
+    Notas (0 a 100)           &    FG    &   CE  &  Nota Bruta  \\
+\hline\hline
+%Nº de Alunos       &  11.523 &                     \\
+% \% Fez Prova      &         &                      \\
+ Mínimo            &  0      &  0                   &  0           \\
+ Máximmo           &  100    &  95.5                &  87.30       \\
+ Média             & 49.95   &  46.71               &  44.65       \\
+ 1º Quartil(25\%)  &  37.50  &  36.40               &  35.50       \\
+ Mediana           &  50.0   & 45.50                &  44.50       \\
+ 3º Quartil(75\%)  &  62.50  &  59.10               &  53.70       \\
+\hline\hline
+\end{tabular}
+\end{table}
+\vskip0.3cm
+
 
 
 
