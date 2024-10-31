@@ -33,14 +33,14 @@ Professor Dr., Faculdade de Estatística - Universidade Federal do Pará(UFPA)\\
 \maketitle
 
 \begin{abstract}
- This study aimed to measure the performance (proficiency) of Computing students enrolled at UFPA, who took the Enade through Item Response Theory (IRT). The measurement of student performance was carried out using the tree-parameter logistic model (ML3P), with data extracted from the website of the National Institute of Educational Studies and Research Anísio Teixeira (Inep) related to the Enade test in 2017, covering 235 students . The elaborated scale allowed to discriminate the students in three levels of performance. The results also showed that the items contained in the ENADE test represented a high degree of difficulty for the group that took the test, in which UFPA students have low performance in the subjects of Artificial Intelligence, Computing Theory, and Database. This result suggests that actions by HEI and public policies capable of contributing to improving the performance presented by students are necessary.
+ This study aimed to measure the performance (proficiency) of Computing students enrolled at UFPA, who took the Enade through Item Response Theory (IRT). The measurement of student performance was carried out using the tree-parameter logistic model (ML3P), with data extracted from the website of the National Institute of Educational Studies and Research Anísio Teixeira (Inep) related to the Enade test in 2017, covering 11.523 students . The elaborated scale allowed to discriminate the students in three levels of performance. The results also showed that the items contained in the ENADE test represented a high degree of difficulty for the group that took the test, in which UFPA students have low performance in the subjects of Artificial Intelligence, Computing Theory, and Database. This result suggests that actions by HEI and public policies capable of contributing to improving the performance presented by students are necessary.
   
 \noindent
   \textbf{Keywords}: Performance, Proficiency, ENADE, Item Response Theory.
 \end{abstract}
 
 \begin{resumo} 
-Este estudo teve como objetivo mensurar o desempenho (proficiência) dos estudantes de Sistemas de Informação matriculados na UFPA, que realizaram o Enade via Teoria de Resposta ao Item (TRI). A mensuração do desempenho dos estudantes foi realizada, utilizando-se o modelo logístico de três parâmetros (ML3P), com dados extraídos do site do (Inep) relativos à prova Enade em 2017, contemplando 11.503 estudantes. A escala elaborada permitiu discriminar os estudantes em três níveis de desempenho. Os resultados apontaram também que os itens contidos na prova ENADE representaram um alto grau de dificuldade para o grupo que realizou a prova, no qual os alunos da UFPA possuem baixo desempenho nos temas de Probabilidade, Programação, Inteligência Artificial, Teoria da Computação, e Banco de Dados. Este resultado sugere que são necessárias ações da IES e políticas públicas capazes de contribuir para melhoria do desempenho apresentado pelos estudantes.
+Este estudo teve como objetivo mensurar o desempenho (proficiência) dos estudantes de Sistemas de Informação matriculados na UFPA, que realizaram o Enade via Teoria de Resposta ao Item (TRI). A mensuração do desempenho dos estudantes foi realizada, utilizando-se o modelo logístico de três parâmetros (ML3P), com dados extraídos do site do (Inep) relativos à prova Enade em 2017, contemplando 11.523 estudantes. A escala elaborada permitiu discriminar os estudantes em três níveis de desempenho. Os resultados apontaram também que os itens contidos na prova ENADE representaram um alto grau de dificuldade para o grupo que realizou a prova, no qual os alunos da UFPA possuem baixo desempenho nos temas de Probabilidade, Programação, Inteligência Artificial, Teoria da Computação, e Banco de Dados. Este resultado sugere que são necessárias ações da IES e políticas públicas capazes de contribuir para melhoria do desempenho apresentado pelos estudantes.
   
 \noindent
   \textbf{Palavras-chave}: Desempenho, Proficiência, ENADE, Teoria de Resposta ao Item.
@@ -92,22 +92,32 @@ Rendeiro et al, (2022) analisou o desenpenho dos estudantes de engenharia da com
 
 A população do estudo é constituída pelos alunos regularmente matriculados nos cursos de graduação em Sistemas de Informação, que fizeram a prova do ENADE em 2017. 
 
-Foi realizado o download dos microdados com extensão .txt por meio do site do INEP, e as respostas corretas receberam o valor 1(um) e as respostas erradas foram substituídas por 0(zero). Para o estudo foram consideradas, exclusivamente, as questões objetivas, ou seja 35(trinta e cinco) questões (oito de formação geral e vinte e sete de conhecimento específico).
+Foi realizado o download dos microdados com extensão .txt por meio do site do INEP, como as respostas disponibilizados são apresentadas na forma de alternativas A, B, C, D ou E, estas foram comparadas ao gabarito. Assim, as respostas corretas receberam o valor 1(um) e as respostas erradas foram substituídas por 0(zero). 
+
+Para o estudo foram consideradas, exclusivamente, as questões objetivas, ou seja 35(trinta e cinco) questões (oito de formação geral e vinte e sete de conhecimento específico).
+
 
 \subsection{Recursos Computacionais}
 \label{sec:metbet}
 
-Para mensuração do desempenho (proficiência) dos estudantes no ENADE foi implementada um script no software R-Project versão 4.4 (R DEVELOPMENT CORE TEAM, 2020) e um ambiente de desenvolvimento integrado chamado Rstudio versão 1.1.47 com uso dos pacotes: mirt (CHALMERS, 2012), ltm (RIZOPOULOS, 2006), irtoys (PARTCHEV, 2010), utilizando um Modelo Logístico de 3 parâmetros (ML3P) via Teoria de Resposta.
+Para mensuração do desempenho (proficiência) dos estudantes no ENADE foi implementada um script no software R-Project versão 4.4 (R DEVELOPMENT CORE TEAM, 2020) e um ambiente de desenvolvimento integrado chamado Rstudio versão 1.1.47 com uso dos pacotes: mirt (CHALMERS, 2012), ltm (RIZOPOULOS, 2006), irtoys (PARTCHEV, 2010).
 
+Foi criado uma conta no Repositório Open-Source chamado Github, para armazenar os scripts de análise dos dados referentes ao ENADE(2005 A 2017). Todo o projeto pode ser encontrado em: \url{https://github.com/MarioDhiego/TCC_SISTEMAS_UFPA}.
+
+\newpage
 \subsection{Classificação dos Itens por Conteúdos Curriculares}
 
 Para realizar análises sobre um histórico de provas, é necessário adotar uma classificação comum para os conteúdos curriculares abordados nas 35 questões objetivas da prova do Enade. No quais os conteúdos são baseados nas diretrizes curriculares nacionais para os cursos de graduação, mas a cada edição estes são agrupados de forma diferente pelas comissões assessoras do INEP. Com isso, as cinco edições do exame para os cursos na area de computação, houve variação no agrupamento dos conteúdos de formação espefícica: 15 tópicos (2005 e 2008), 21 em (2011) e 17 em 2014 e 2017 (CHARÃO et al., 2020).
 
-Para escolha de uma classificação para os itens, foi utilizado como referência o trabalho de Charão et al, (2020), tomando-se por referência as 17 categorias de conteúdos de formação específica do último exame em 2017 e 2014. Para os exames de 2005, 2008 e 2011, um especialista realizou manualmente a categorização de cada questão em até três temas, com base nas categorias do ENADE do 2017. 
+Para escolha de uma classificação para os itens, foi utilizado como referência o trabalho de Charão et al, (2020), tomando-se por referência as 17 categorias de conteúdos de formação específica do último exame em 2017 e 2014. 
+
+%Para os exames de 2005, 2008 e 2011, um especialista realizou manualmente a categorização de cada questão em até três temas, com base nas categorias do ENADE do 2017. 
 
 \subsubsection{Análise dos Dados}
 
-A mensuração do desempenho foi desenvolvida por meio da Teoria da Resposta ao Item (TRI), e A estimação dos parâmetros foi realizada pelo Método de Máxima Verossimilhança Marginal, com a aplicação conjunta de um processo interativo chamado de algoritmo Newton-Raphson, conforme Andrade et al. (2000). Para a comparações entre os modelos gerados utilizou-se o Teste da Razão de Verossimilhança por meio da Anova e os critérios AIC (Akaike Information Criterion) e BIC (Bayesian Information Criterion).
+A mensuração do desempenho foi desenvolvida por meio da Teoria da Resposta ao Item (TRI), e A estimação dos parâmetros foi realizada pelo Método de Máxima Verossimilhança Marginal, com a aplicação conjunta de um processo interativo chamado de algoritmo Newton-Raphson, conforme Andrade et al. (2000). 
+
+Para a comparações entre os modelos gerados utilizou-se o Teste da Razão de Verossimilhança por meio da Anova e os critérios AIC (Akaike Information Criterion) e BIC (Bayesian Information Criterion), além de serem produzidos os gráficos com as Curvas Características do Item.
 
 \newpage
 \section{RESULTADOS E DISCUSSÕES}
@@ -133,6 +143,12 @@ Nos resultados obtidos pelos respondentes neste teste, observa-se notas variando
 \end{table}
 
 
+Para obter percentual de acerto/erro, foi considerado o vetor de resposta do estudante, checando cada questão e comparando com o total de questões de determinado tema. Analisando a distribuição de proporção de acertos, notou-se que, Processos Migratórios (84,5\%), Teoria da Computação (83.1\%) e Inteligência Artificial (73,8\%) são os temas de maior percentual de acertos entre os estudantes concluintes do curso de Bacharelado em Sistemas de Informação.
+
+
+Para uma análise do ponto de vista de nota, a tabela 2 traz as médias.
+
+
 \begin{table}[htb]
 	\centering
 	\caption{Medidas Estatísticas referentes as \textbf{Nota Bruta Geral} para os itens da Prova do Enade/2017 referentes aos alunos matriculados nos curso de Sistemas de Informação no Brasil (\textbf{n=11.523}).}
@@ -155,8 +171,7 @@ Nos resultados obtidos pelos respondentes neste teste, observa-se notas variando
 
 
 
-
-
+\newpage
 O processo de estimação dos itens foi realizado em vários passos, estratégia utilizada para manter o maior número possível de itens na prova do ENADE. A qualidade dos itens foi avaliada considerando-se, principalmente, os valores referentes às estimativas dos parâmetros de discriminação e de dificuldade e, ainda, os erros-padrão (EP) destas estimativas.
 
 Depois do primeiro passo, ou seja, após a primeira calibração (estimação) sem a retirada de itens, os parâmetros dos itens foram sendo novamente re-estimados por meio do programa R, que estima conjuntamente os itens e coloca a habilidade numa mesma escala, fazendo com que todos os escores dos alunos sejam comparáveis, por meio do processo de equalização.
@@ -180,7 +195,7 @@ A tabela x apresenta os parâmetros de discriminação ($a_{i}$), dificuldade ($
   Q07       & Cultura e Arte                                       &             &           &      \\
   Q08       & Responsabilidade Social/Ética e Cidadania            &             &           &       \\
   Q09       & Algoritmos/Estruturas de Dados                       &             &           &    \\
-  Q10       & Engenharia de Software/Interação Homem-Computador.   &             &           &     \\
+  %Q10       & Engenharia de Software/Interação Homem-Computador.   &             &           &     \\
   Q11       & Paradigmas de Linguagens de Programação.             &             &           &       \\
   Q12       & Arquitetura de Computadores/Sistemas Operacionais.   &             &           &       \\
   Q13       & Sistemas Digitais.                                   &             &           &       \\
@@ -217,7 +232,7 @@ Os parâmetros $a_{i}$ indica a discriminação de cada item, quanto maior o val
 
 O parâmetros $b_{i}$ representa a dificuldade de cada item, quanto maior seu valor, maior a proficiência necessária dos estudantes para responder a questão. Conforme a tabela X, os itens que possuem maior grau de dificuldade para os estudantes avaliados foram: xxxxxxx. Por outro lado, os itens mais fáceis para os estudantes foram: xxxxxxx.
 
-Depois de terminada a fase de calibração dos parâmetros dos itens, é feita a estimação das habilidades dos respondentes. De acordo com a tabela 8 verificou-se que, os itens 9, 10, 14, 25 e 29 foram eliminados do processo de estimação do modelo de desempenho via teoria da resposta ao item.
+Depois de terminada a fase de calibração dos parâmetros dos itens, é feita a estimação das habilidades dos respondentes. De acordo com a tabela 8 verificou-se que, os itens xxxxxx foram eliminados do processo de estimação do modelo de desempenho via teoria da resposta ao item.
 
 
 
