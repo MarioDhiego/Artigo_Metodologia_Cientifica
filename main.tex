@@ -3,47 +3,44 @@
 \usepackage{sbc-template}
 \usepackage{graphicx,url}
 \usepackage{xcolor}
-\usepackage[brazil]{babel}   
 \usepackage[utf8]{inputenc}
 \usepackage[portuguese]{babel}
-\graphicspath{ {./} }
 \usepackage{quoting}
 \usepackage{hyphenat}
 \usepackage{hyperref}
 \usepackage{multicol}
 
-\sloppy
-\title{Mensuração do Desempenho (\textit{proficiência}) dos Estudantes do Curso de Bacharelado em Sistemas de Informação, na Prova do ENADE/2017 via Teoria de Resposta ao Item}
 
-\author{Mário D. R. Valente\inst{1}, Dionne C. Monteiro\inst{2}, Heliton R. Tavares \inst{3}}
+\title{Mensuração da Proficiência dos Estudantes do Curso de Bacharelado em Sistemas de Informação, na Prova do ENADE/2017 via Teoria de Resposta ao Item}
 
-\address{Graduando em Sistemas de Informação - Universidade Federal do Pará(UFPA) \\
-  Rua. Augusto Corrêa 01 -- Guamá -- Belém -- PA -- Brasil
-\nextinstitute
-  Professor Dr., Faculdade de Computação - Universidade Federal do Pará(UFPA)\\
-  Av. Augusto Corrêa 01 -- Guamá -- Belém - -- PA -- Brasil 
-  \nextinstitute
-Professor Dr., Faculdade de Estatística - Universidade Federal do Pará(UFPA)\\
-  Av. Augusto Corrêa 01 -- Guamá -- Belém - -- PA -- Brasil 
-    \email{diego.vatente@gmail.com, dionne@ufpa.br, Heliton@ufpa.br}}
+%\author{Mário Diego Rocha Valente\inst{1}, Dionne Cavalcante Monteiro\inst{2}, Heliton Ribeiro Tavares \inst{3}}
+
+%\address{Graduando em Sistemas de Informação - Universidade Federal do Pará(UFPA) \\
+% Rua. Augusto Corrêa 01 -- Guamá -- Belém -- PA -- Brasil
+%\nextinstitute
+%  Professor Dr., Faculdade de Computação - Universidade Federal do Pará(UFPA)\\
+%  Av. Augusto Corrêa 01 -- Guamá -- Belém - -- PA -- Brasil 
+%  \nextinstitute
+%Professor Dr., Faculdade de Estatística - Universidade Federal do Pará(UFPA)\\
+%  Av. Augusto Corrêa 01 -- Guamá -- Belém - -- PA -- Brasil 
+%    \email{diego.vatente@gmail.com, dionne@ufpa.br, Heliton@ufpa.br}}
 
 
 \begin{document} 
-
 \maketitle
 
 \begin{abstract}
- This study aimed to measure the performance (proficiency) of Computing students enrolled at UFPA, who took the Enade through Item Response Theory (IRT). The measurement of student performance was carried out using the tree-parameter logistic model (ML3P), with data extracted from the website of the National Institute of Educational Studies and Research Anísio Teixeira (Inep) related to the Enade test in 2017, covering 11.523 students . The elaborated scale allowed to discriminate the students in three levels of performance. The results also showed that the items contained in the ENADE test represented a high degree of difficulty for the group that took the test, in which UFPA students have low performance in the subjects of Artificial Intelligence, Computing Theory, and Database. This result suggests that actions by HEI and public policies capable of contributing to improving the performance presented by students are necessary.
+This study aimed to measure the performance (proficiency) of undergraduate students in Information Systems who took the ENADE exam using Item Response Theory (IRT). Student performance was measured using the three-parameter logistic model (3PL), based on data extracted from the website of the National Institute for Educational Studies and Research Anísio Teixeira (INEP), referring to the ENADE examination conducted in 2017, comprising a total of 11,523 students. The estimated proficiency scale allowed the classification of students into three performance levels. The results also indicated that the items included in the ENADE test presented a relatively high level of difficulty for the evaluated group. In particular, students showed lower performance in the areas of Probability, Programming, Artificial Intelligence, Theory of Computation, and Databases. These findings suggest the need for institutional actions and public policies capable of contributing to the improvement of students' academic performance in these areas.
   
 \noindent
-  \textbf{Keywords}: Performance, Proficiency, ENADE, Item Response Theory.
+\textbf{Keywords}: Performance, Proficiency, ENADE, Item Response Theory.
 \end{abstract}
 
-\begin{resumo} 
-Este estudo teve como objetivo mensurar o desempenho (proficiência) dos estudantes de Sistemas de Informação matriculados na UFPA, que realizaram o Enade via Teoria de Resposta ao Item (TRI). A mensuração do desempenho dos estudantes foi realizada, utilizando-se o modelo logístico de três parâmetros (ML3P), com dados extraídos do site do (Inep) relativos à prova Enade em 2017, contemplando 11.523 estudantes. A escala elaborada permitiu discriminar os estudantes em três níveis de desempenho. Os resultados apontaram também que os itens contidos na prova ENADE representaram um alto grau de dificuldade para o grupo que realizou a prova, no qual os alunos da UFPA possuem baixo desempenho nos temas de Probabilidade, Programação, Inteligência Artificial, Teoria da Computação, e Banco de Dados. Este resultado sugere que são necessárias ações da IES e políticas públicas capazes de contribuir para melhoria do desempenho apresentado pelos estudantes.
-  
+\begin{resumo}
+Este estudo teve como objetivo mensurar o desempenho (proficiência) dos estudantes do curso de Sistemas de Informação que realizaram o Exame Nacional de Desempenho dos Estudantes (ENADE) por meio da Teoria de Resposta ao Item (TRI). A mensuração do desempenho foi realizada utilizando o modelo logístico de três parâmetros (ML3P), com dados extraídos do site do Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP), referentes à prova do ENADE aplicada em 2017, contemplando um total de 11.523 estudantes. A escala estimada permitiu classificar os estudantes em três níveis de desempenho. Os resultados indicaram que os itens presentes na prova do ENADE apresentaram um elevado grau de dificuldade para o grupo avaliado. Observou-se, ainda, baixo desempenho dos estudantes nos temas de Probabilidade, Programação, Inteligência Artificial, Teoria da Computação e Banco de Dados. Esses resultados sugerem a necessidade de ações institucionais e de políticas públicas voltadas à melhoria do desempenho acadêmico dos estudantes nessas áreas do conhecimento.
+
 \noindent
-  \textbf{Palavras-chave}: Desempenho, Proficiência, ENADE, Teoria de Resposta ao Item.
+\textbf{Palavras-chave}: Desempenho, Proficiência, ENADE, Teoria da Resposta ao Item.
 \end{resumo}
 
 \newpage
@@ -59,15 +56,13 @@ No componente de avaliação da Formação Geral, foram consideradas as seguinte
 
 A nota final do estudante no Enade é obtida pela média ponderada na qual a parte de Formação Geral responde por 25\%, e a parte de conhecimento específico, por 75\%. A nota de Conhecimento Específico é a média ponderada das duas notas, Objetiva e Discursiva, com pesos iguais a, respectivamente, 15\% e 85\% e arredondada a uma casa decimal.
 
-Desta forma o presente trabalho tem o objetivo de Mensurar o Desempenho (proficiência) dos Estudantes nos Cursos de Sistemas de Informação da UFPA na Prova do ENADE em 2017, por meio da Teoria de Resposta ao Item (TRI), indicando perspectivas de uso dos resultados para o aprimoramento do Projeto Político Pedagógico da Faculdade de Computação.
+Desta forma o presente trabalho tem o objetivo de Mensurar o Desempenho (proficiência) dos Estudantes nos Cursos de Sistemas de Informação na Prova do ENADE em 2017, por meio da Teoria de Resposta ao Item (TRI), indicando perspectivas de uso dos resultados para o aprimoramento do Projeto Político Pedagógico da Faculdade de Computação.
 
 
 \section{Trabalho Correlatos} \label{sec:firstpage}
 No Brasil, alguns trabalhos abordaram a Teoria da Resposta ao Item (TRI) para avaliação de proficiência com dados do ENADE. Oliveira (2006) utilizou a TRI para proceder a uma análise das propriedades psicométricas da prova do ENADE de 2004, aplicada aos alunos dos cursos de medicina. Nogueira (2008) aplicou a TRI para avaliar as questões da prova de formação geral do ENADE de 2004 e 2005, a fim de estimar a proficiência dos estudantes e o ajuste dos itens ao modelo de Rasch.
 
- Primi, Hutz e Silva (2011) realizaram análise psicométrica dos itens empregando os modelos Rasch e de créditos parciais na prova do ENADE de Psicologia de 2006.
-
-Camargo et al. (2016) mensuraram a proficiência dos estudantes do curso de Ciências Contábeis no ENADE utilizando TRI, demonstrando que os itens da prova representaram um alto grau de dificuldade para os estudantes e, em geral, os estudantes apresentaram proficiências muito baixas.
+ Primi, Hutz e Silva (2011) realizaram análise psicométrica dos itens empregando os modelos Rasch e de créditos parciais na prova do ENADE de Psicologia de 2006. Camargo et al. (2016) mensuraram a proficiência dos estudantes do curso de Ciências Contábeis no ENADE utilizando TRI, demonstrando que os itens da prova representaram um alto grau de dificuldade para os estudantes e, em geral, os estudantes apresentaram proficiências muito baixas.
 
 \newpage
 Figueiró e Mozzaquatro (2017) analisaram os microdados do Enade de 2014, para avaliar o desempenho dos estudantes do curso de Ciência da
@@ -75,14 +70,11 @@ Computação do Estado do Rio Grande do Sul, bem como foram feitas comparações
 agrupar as instituições públicas e privadas do mesmo estado de acordo com seus
 desempenhos.
 
-
 Em 2018, Lima et al., desenvolveram uma metodologia para classificação das questões do ENADE em temas. Araujo(2019), desenvolveu uma ferramenta web com dados de todos os cursos do Enade 2017, utilizando algoritimo de machine learning, para classificar as notas dos alunos por desempenho.
 
 Charão et al. (2020) avaliaram o desempenhos dos alunos de Ciência da Computação da UFSM, na prova do Enade (2005 a 2017), explorando os resultados para subsidiar e reunir contribuições para a revisão do projeto pedagógico do curso. 
 
-Cunha et al. (2021) desenvolveram uma ferramenta de análise de dados automática com os microdados do Enade (2005 a 201) para o curso de Ciência da Computação da UFPA, via linguagem de programação Python.
-
-Rendeiro et al, (2022) analisou o desenpenho dos estudantes de engenharia da computação da UFPA com base nos dados do Enade (2014,2017 e 2019).
+Cunha et al. (2021) desenvolveram uma ferramenta de análise de dados automática com os microdados do Enade (2005 a 201) para o curso de Ciência da Computação da UFPA, via linguagem de programação Python. Rendeiro et al, (2022) analisou o desenpenho dos estudantes de engenharia da computação da UFPA com base nos dados do Enade (2014,2017 e 2019).
 
 
 
@@ -92,17 +84,15 @@ Rendeiro et al, (2022) analisou o desenpenho dos estudantes de engenharia da com
 
 A população do estudo é constituída pelos alunos regularmente matriculados nos cursos de graduação em Sistemas de Informação, que fizeram a prova do ENADE em 2017. 
 
-Foi realizado o download dos microdados com extensão .txt por meio do site do INEP, como as respostas disponibilizados são apresentadas na forma de alternativas A, B, C, D ou E, estas foram comparadas ao gabarito. Assim, as respostas corretas receberam o valor 1(um) e as respostas erradas foram substituídas por 0(zero). 
-
-Para o estudo foram consideradas, exclusivamente, as questões objetivas, ou seja 35(trinta e cinco) questões (oito de formação geral e vinte e sete de conhecimento específico).
+Foi realizado o download dos microdados com extensão .txt por meio do site do INEP, como as respostas disponibilizados são apresentadas na forma de alternativas A, B, C, D ou E, estas foram comparadas ao gabarito. Assim, as respostas corretas receberam o valor 1(um) e as respostas erradas foram substituídas por 0(zero). Para o estudo foram consideradas, exclusivamente, as questões objetivas, ou seja 35(trinta e cinco) questões (oito de formação geral e vinte e sete de conhecimento específico).
 
 
 \subsection{Recursos Computacionais}
 \label{sec:metbet}
 
-Para mensuração do desempenho (proficiência) dos estudantes no ENADE foi implementada um script no software R-Project versão 4.4 (R DEVELOPMENT CORE TEAM, 2020) e um ambiente de desenvolvimento integrado chamado Rstudio versão 1.1.47 com uso dos pacotes: mirt (CHALMERS, 2012), ltm (RIZOPOULOS, 2006), irtoys (PARTCHEV, 2010).
+Para mensuração do desempenho (proficiência) dos estudantes no ENADE foi implementada um script no software R-Project versão 4.5 (R DEVELOPMENT CORE TEAM, 2025) e um ambiente de desenvolvimento integrado chamado Rstudio versão 1.1.47 com uso dos pacotes: mirt (CHALMERS, 2012), ltm (RIZOPOULOS, 2006), irtoys (PARTCHEV, 2010).
 
-Foi criado uma conta no Repositório Open-Source chamado Github, para armazenar os scripts de análise dos dados referentes ao ENADE(2005 A 2017). Todo o projeto pode ser encontrado em: \url{https://github.com/MarioDhiego/TCC_SISTEMAS_UFPA}.
+%Foi criado uma conta no Repositório Open-Source chamado Github, para armazenar os scripts de análise dos dados referentes ao ENADE(2005 A 2017). Todo o projeto pode ser encontrado em: \url{https://github.com/MarioDhiego/TCC_SISTEMAS_UFPA}.
 
 \newpage
 \subsection{Classificação dos Itens por Conteúdos Curriculares}
@@ -119,18 +109,17 @@ A mensuração do desempenho foi desenvolvida por meio da Teoria da Resposta ao 
 
 Para a comparações entre os modelos gerados utilizou-se o Teste da Razão de Verossimilhança por meio da Anova e os critérios AIC (Akaike Information Criterion) e BIC (Bayesian Information Criterion), além de serem produzidos os gráficos com as Curvas Características do Item.
 
-\newpage
+
 \section{RESULTADOS E DISCUSSÕES}
   
 Nos resultados obtidos pelos respondentes neste teste, observa-se notas variando entre 0 e 30 acertos, de um total de 35 itens. Destaca-se que ocorreu escore nulo (nenhum acertos, somente 284 alunos), como também não existiram respondentes que obtiveram escore total.  
-
 
 \begin{table}[htb]
 	\centering
 	\caption{Medidas Estatísticas dos \textbf{Escore Bruto Geral} para os itens da Prova do Enade/2017 referentes aos alunos matriculados nos Cursos de Sistemas de Informação no Brasil (\textbf{n=11.523})}.
 \begin{tabular}{l|c|c|c}
 \hline\hline 
- Escores(0 a 35)  & FG      &  CE     & Escore Bruto   \\
+ Escores(0 a 35)  & Formação Geral      &  Componente Específico     & Escore Bruto   \\
 \hline\hline
  Nº de Itens      & 8       &  27     &   35           \\
  Média            &  3.99   &  10.90  &   14.90        \\
@@ -142,11 +131,8 @@ Nos resultados obtidos pelos respondentes neste teste, observa-se notas variando
 \end{tabular}
 \end{table}
 
-
-Para obter percentual de acerto/erro, foi considerado o vetor de resposta do estudante, checando cada questão e comparando com o total de questões de determinado tema. Analisando a distribuição de proporção de acertos, notou-se que, Processos Migratórios (84,5\%), Teoria da Computação (83.1\%) e Inteligência Artificial (73,8\%) são os temas de maior percentual de acertos entre os estudantes concluintes do curso de Bacharelado em Sistemas de Informação.
-
-
-Para uma análise do ponto de vista de nota, a tabela 2 traz as médias.
+\newpage
+Para obter percentual de acerto/erro, foi considerado o vetor de resposta do estudante, checando cada questão e comparando com o total de questões de determinado tema. Analisando a distribuição de proporção de acertos, notou-se que, Processos Migratórios (84,5\%), Teoria da Computação (83.1\%) e Inteligência Artificial (73,8\%) são os temas de maior percentual de acertos entre os estudantes concluintes do curso de Bacharelado em Sistemas de Informação. Para uma análise do ponto de vista de nota, a tabela 2 traz as médias.
 
 
 \begin{table}[htb]
@@ -154,7 +140,7 @@ Para uma análise do ponto de vista de nota, a tabela 2 traz as médias.
 	\caption{Medidas Estatísticas referentes as \textbf{Nota Bruta Geral} para os itens da Prova do Enade/2017 referentes aos alunos matriculados nos curso de Sistemas de Informação no Brasil (\textbf{n=11.523}).}
 \begin{tabular}{l|c|c|c}
 \hline\hline 
-    Notas (0 a 100)           &    FG    &   CE  &  Nota Bruta  \\
+    Notas (0 a 100)           &    Formação Geral    &   Componente Específico  &  Nota Bruta  \\
 \hline\hline
 %Nº de Alunos       &  11.523 &                     \\
 % \% Fez Prova      &         &                      \\
@@ -169,58 +155,57 @@ Para uma análise do ponto de vista de nota, a tabela 2 traz as médias.
 \end{table}
 \vskip0.3cm
 
+Uma análise exploratória inicial dos dados sugere verificar, ainda de forma empírica, o grau de dificuldade de cada item, o que pode ser feito por meio da observação dos percentuais de acertos, mostrado na Tabela 3, onde se obeserva que itens com altos percentuais de acertos podem ser considerados como mais fáceis do que aqueles com baixo percentual de acerto.  \vskip0.3cm
+
+Na Tabela 3 merecem destaques os itens 6 e 33 por apresentarem percentuais de acertos acima de 80\% o que classifica, em princípio, como itens mais fáceis. De forma análoga, os itens 9, 10, 25 e 29 foram os itens mais difíceis, com percentuais de erro também acima de 80\%.  \vskip0.3cm
+
+Na verdade  este fato sugere fortemente a análise de um especialista em itens para, de posse de outras informações, comprender e avaliar os itens em questão, inclusive identificando aqueles que não ocntribuem para o modelo e que, portanto, não devem ser considerados no processo de análise final.
 
 
-\newpage
-O processo de estimação dos itens foi realizado em vários passos, estratégia utilizada para manter o maior número possível de itens na prova do ENADE. A qualidade dos itens foi avaliada considerando-se, principalmente, os valores referentes às estimativas dos parâmetros de discriminação e de dificuldade e, ainda, os erros-padrão (EP) destas estimativas.
-
-Depois do primeiro passo, ou seja, após a primeira calibração (estimação) sem a retirada de itens, os parâmetros dos itens foram sendo novamente re-estimados por meio do programa R, que estima conjuntamente os itens e coloca a habilidade numa mesma escala, fazendo com que todos os escores dos alunos sejam comparáveis, por meio do processo de equalização.
-
-A tabela x apresenta os parâmetros de discriminação ($a_{i}$), dificuldade ($b_{i}$), e acerto ao acaso ($c_{i}$) dos itens avaliados. Tais parâmetros foram estimados no software $R_{4.4}$ com escala 0,1.
-
-
-\begin{table}[]
+\begin{table}[htbp]
 	\centering
-	\caption{Estimação dos Parâmetros dos Itens para o Modelo Logístico(ML3PL) da TRI para a Prova do Enade/2017 no Curso de Sistemas de Informação do Brasil (\textbf{n=11.523}).}
-\begin{tabular}{c|l|c|c|c}
+	\caption{Proporção de Acertos e Erros para os \textbf{34 Itens} na Prova do Enade/2017 referentes aos alunos matriculados no Curso de \textbf{Sistemas de Informação} no Brasil (\textbf{n=11.523}).}
+\begin{tabular}{c|c|c|c|c|c|c}
 \hline\hline 
-  Itens     &  Conteúdo                                            &  $(a_{i})$  & $(b_{i})$ & $(c_{i})$ \\
+ Categorias    &  Itens      & Erros(\%)           & (n)      & Acertos(\%)       & (n)      & Gabarito  \\
 \hline\hline
-  Q01       &  Globalização e Política Internacional               &             &           &     \\
-  Q02       &  Vida Urbana/Rural/Trabalho;CTS.                     &             &           &       \\
-  Q03       &  Meio Ambiente;Responsabilidade Social               &             &           &       \\
-  Q04       &  TIC/Ciência/Tecnologia/Sociedade.                   &             &           &     \\
-  Q05       & Inovação Tecnológica/Meio Ambiente                   &             &           &       \\
-  Q06       & Processos Migratórios;Relações/Trabalho              &             &           &       \\
-  Q07       & Cultura e Arte                                       &             &           &      \\
-  Q08       & Responsabilidade Social/Ética e Cidadania            &             &           &       \\
-  Q09       & Algoritmos/Estruturas de Dados                       &             &           &    \\
-  %Q10       & Engenharia de Software/Interação Homem-Computador.   &             &           &     \\
-  Q11       & Paradigmas de Linguagens de Programação.             &             &           &       \\
-  Q12       & Arquitetura de Computadores/Sistemas Operacionais.   &             &           &       \\
-  Q13       & Sistemas Digitais.                                   &             &           &       \\
-  Q14       & Lógica e Matemática Discreta.                        &             &           &       \\
-  Q15       & Redes de Computadores                                &             &           &      \\
-  Q16       & Ética, Computador e Sociedade.                       &             &           &      \\
-  Q17       & Inteligência Artificial e Computacional.             &             &           &      \\
-  Q18       & Algoritmos/Estruturas de Dados.                      &             &           &       \\
-  Q19       & Banco de Dados.                                      &             &           &       \\
-  Q20       & Redes de Computadores.                               &             &           &      \\
-  Q21       & Lógica e Matemática Discreta.                        &             &           &       \\
-  Q22       & Fundamentos e Técnicas de Programação.               &             &           &    \\
-  Q23       & Teoria da Computação.                                &             &           &     \\
-  Q24       & Teoria dos Grafos/Algoritmos/Estruturas de Dados.    &             &           &     \\
-  Q25       & Teoria da Computação/Algoritmos/Estruturas de Dados. &             &           &     \\
-  Q26       & Computação Gráfica; Processamento de Imagem.         &             &           &     \\
-  Q27       & Computação Gráfica; Processamento de Imagem.         &             &           &    \\
-  Q28       & Engenharia de Software/Interação Homem-Computador.   &             &           &    \\
-  Q29       & Arquitetura de Computadores/Sistemas Operacionais.   &             &           &     \\
-  Q30       & Compiladores.                                        &             &           &   \\
-  Q31       & Sistemas Distribuídos.                               &             &           &    \\
-  Q32       & Inteligência Artificial e Computacional.             &             &           &    \\
-  Q33       & Teoria da Computação/Algoritmos/Estruturas de Dados. &             &           &     \\
-  Q34       & Banco de Dados                                       &             &           &     \\
-  Q35       & Arquitetura de Computadores/Sistemas Operacionais    &             &           &    \\
+               & 01          &  76.60              &  8.827   & 23.40             &  2.696   &  C       \\
+               & 02          &  49.97              &  5.758   &  50.03            & 5.765    &  C       \\
+               & 03          &  64.55              &  7.438   &  35.45            & 4.085    &  B       \\
+               & 04          &  36.74              &  4.233   &  63.26            & 7.290    &  B       \\
+               & 05          &  38.37              &  4.421   &  61.63            & 7.102    &  C       \\
+               & \textbf{06} &  15.46              &  1.782   & \textbf{84.54}    & 9.741    &  E       \\
+               & 07          &  65.17              &  7.510   & 34.83             & 4.013    &  A       \\
+FG             & 08          &  53.54              &  6.169   & 46.46             & 5.354    &  D       \\
+\hline
+               & \textbf{09} & \textbf{82.90}      &  9.552    & 17.10            & 1.971    &  C      \\
+               & \textbf{10} &  \textbf{89.60}     &  10.325   & 10.40            &  1.198   &  E      \\
+               & 11          &  78.43              &  9.037    & 21.57            & 2486     &  A      \\
+               & 12          &  48.13              &  5.546    & 51.87            & 5977     &  C      \\
+               & 13          &  60.70              &  6.995    & 39.30            & 4528     &  E      \\
+               & 14          &  Anulada            &  Anulada  &  Anulada         & Anulada  &  Anulada  \\
+               & 15          & 49.83               &  5.742    & 50.17            & 5.781    &  A     \\
+               & 16          & 27.76               &  3.199    & 72.24            & 8.324    &  D    \\
+               & 17          & 26.21               &  3.020    &  73.79           & 8.503    &  B    \\
+               & 18          & 62.20               &  7.167    &  37.80           & 4.356    &  B    \\
+               & 19          & 54.27               &  6.254    &  45.73           & 5.269    &  B    \\
+               & 20          & 64.32               &  7.412    &  35.68           & 4.111    &  E    \\
+CE    
+               & 21          &  69.96              &  8.061    &  30.04           &  3.462   &  B    \\
+               & 22          &  58.34              &  6.722    &  41.66           &  4.801   &  D    \\
+               & 23          &  54.46              &  6.276    &  45.54           &  5.247   &  D    \\          
+               & 24          &  72.46              &  8.349    &  27.54           &  3.174   &  B    \\
+               & \textbf{25} & \textbf{84.63}      &  9.752    &  15.37           &  1.771   &  B    \\
+               & 26          &  50.98              &  5.874    &  49.08           &  5.649   &  E    \\              
+               & 27          &  49.41              &  5.694    &  50.59           & 5.829    &  A    \\
+               & 28          &  59.79              &  6.890    &  40.21           & 4.633    &  E    \\
+               & \textbf{29} &  \textbf{80.01}     &  9.220    &  19.99           &  2.303   &  A    \\
+               & 30          &  45.40              &  5.232    &  54.60           &  6291    &  C    \\
+               & 31          &  50.76              &  5.849    &  49.24           &  5.674   &  B    \\
+               & 32          &  70.24              &  8.094    &  29.76           &  3.429   &  D    \\
+               & \textbf{33} &  16.90              &  1.947    &  \textbf{83.10}  &   9.576  &  C    \\
+               & 34          &  56.56              &  6.517    &  43.44           &   5.006  &  C    \\
+               & 35          &  45.38              &  5.229    &  54.62           &   6.294  &  C    \\
 \hline\hline
 \end{tabular}
 \end{table}
@@ -228,19 +213,120 @@ A tabela x apresenta os parâmetros de discriminação ($a_{i}$), dificuldade ($
 
 
 \newpage
-Os parâmetros $a_{i}$ indica a discriminação de cada item, quanto maior o valor deste parâmetro, maior é o seu poder de discriminação. Em outras palavras, indica o quanto cada item consegue diferenciar aqueles indivíduos que possuem o conhecimento avaliado daqueles que não o possuem. Os itens com maior poder de discriminação foram os itens: xxxxx. 
 
-O parâmetros $b_{i}$ representa a dificuldade de cada item, quanto maior seu valor, maior a proficiência necessária dos estudantes para responder a questão. Conforme a tabela X, os itens que possuem maior grau de dificuldade para os estudantes avaliados foram: xxxxxxx. Por outro lado, os itens mais fáceis para os estudantes foram: xxxxxxx.
+Realizado o estudo exploratório dos dados, na abordagem da \textbf{Teoria Clássica dos Teste}, parte-se para o estudo dos itens propriamente dito, contemplando a estimação de seus parâmetros; a estimação das habilidades individuais de cada candidato e, finalmente, a construção da escala de proficiêncis, objeto deutilizaçao deste método.\vskip0.3cm
 
-Depois de terminada a fase de calibração dos parâmetros dos itens, é feita a estimação das habilidades dos respondentes. De acordo com a tabela 8 verificou-se que, os itens xxxxxx foram eliminados do processo de estimação do modelo de desempenho via teoria da resposta ao item.
+%A função de informação do item é estatisticamente definida como o montante de informação psicométrica (Fisher) que um item contém em todos os pontos ao longo do contínuo traço latente que ele representa, ou seja, ela permite analisar quanto um item (ou teste) contém de informação para a medida de habilidade.
+
+%$$ I_{i}(\theta) = \frac{[P_{i}^{'} (\theta)]^2}{P(\theta) Q_{i}(\theta)} $$
+
+%Em que :
+%\vskip0.3cm
+
+%\begin{itemize}
+%    \item $i= 1,2, ..., n$ é o números de itens do teste;
+%    \item $P_{i}^{'}(\theta)$ é a primeira derivada de $P_{i}(\theta)$ avaliada em um dado nível do traço latente;
+%    \item $P_{i}(\theta)$ é a função resposta ao item (probabilidade de uma resposta correta ao item);
+%    \item $Q_{i}(\theta) = 1- P_{i}(\theta)$.
+%\end{itemize}
+%\vskip0.3cm
 
 
+A Figura \ref{fig:info_itens} apresenta as Curvas de Informação dos Itens (CII). Observa-se que os itens 33, 11 e 1 são aqueles que fornecem maior quantidade de informação ao teste, contribuindo significativamente para a precisão da medida de proficiência em determinados níveis do traço latente.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.45\linewidth]{curva_informacao1.pdf}
+\caption{Curvas de Informação dos Itens (CII) da Prova do ENADE/2017 para o curso de Sistemas de Informação.}
+\label{fig:info_itens}
+\end{figure}
+
+A Figura \ref{fig:icc_itens} apresenta as Curvas Características dos Itens (CCI), que descrevem a relação entre o nível de habilidade do estudante (traço latente $\theta$) e a probabilidade de acerto em cada item. No gráfico, o eixo X representa a proficiência do estudante, enquanto o eixo Y indica a probabilidade de resposta correta.
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.45\linewidth]{Curva_Caracteristica1.pdf}
+\caption{Curvas Características dos Itens (CCI) da Prova do ENADE/2017 para o curso de Sistemas de Informação.}
+\label{fig:icc_itens}
+\end{figure}
+
+
+O processo de estimação dos itens foi realizado em múltiplas etapas, estratégia adotada para manter o maior número possível de itens na prova do ENADE. A qualidade dos itens foi avaliada considerando principalmente os valores estimados dos parâmetros de discriminação $(a_{i})$,  e dificuldade $(b_{i})$, bem como os erros-padrão (EP) dessas estimativas.
+
+Após a primeira calibração, realizada sem exclusão de itens, os parâmetros foram reestimados utilizando o software R (versão 4.5), o qual permite a estimação conjunta dos itens e das habilidades em uma mesma escala. Esse procedimento garante que todos os escores dos estudantes sejam comparáveis, por meio do processo de equalização.
+
+A tabela 3 apresenta os parâmetros de discriminação ($a_{i}$), dificuldade ($b_{i}$), e acerto ao acaso ($c_{i}$) dos itens avaliados. Tais parâmetros foram estimados no software $R_{4.5}$ com escala 0,1.
+
+
+Os parâmetros $a_{i}$ indica o poder de discriminação de cada item, ou seja, a capacidade de diferenciar estudantes com diferentes níveis de proficiência na competência avaliada. Quanto maior o valor de , maior a sensibilidade do item em separar estudantes de maior e menor habilidade. No conjunto de itens analisados, os itens com maior discriminação foram: Q16 (Redes de Computadores,  $a_{i}$ = 12,34), Q17 (Ética, Computador e Sociedade, $a_{i}$ = 10,61) e Q19 (Algoritmos/Estruturas de Dados, $a_{i}$ = 8,80).
+
+O parâmetros $b_{i}$ representa a dificuldade do item, ou seja, o nível de proficiência necessário para que o estudante tenha 50\% de probabilidade de acerto. Itens com valores maiores de $b_{i}$ exigem maior conhecimento dos estudantes. Os itens mais difíceis foram: Q09 (Algoritmos/Estruturas de Dados, $b_{i}$ = 7,03), Q25 (Teoria dos Grafos/Estruturas de Dados, $b_{i}$ = 7,28) e Q10 (Engenharia de Software/Interação Homem-Computador, $b_{i}$ = 5,15), enquanto os itens mais fáceis foram: Q11 (Paradigmas de Linguagens de Programação, $b_{i}$ = −1,16), Q21 (Redes de Computadores, $b_{i}$ = −6,32) e Q32 (Sistemas Distribuídos, $b_{i}$ = −2,91).
+
+
+O parâmetro $c_{i}$ representa a probabilidade de acerto ao acaso, sendo especialmente relevante para itens de múltipla escolha. Valores mais elevados indicam maior chance de acerto sem conhecimento prévio do conteúdo.
+
+Após a calibração dos itens, procedeu-se à estimação das habilidades dos respondentes. Durante esse processo, observou-se que alguns itens com problemas de ajuste ou baixa confiabilidade foram eliminados da modelagem final, garantindo que a escala de proficiência representasse com precisão o desempenho dos estudantes.
+
+
+
+\begin{table}[htbp]
+	\centering
+	\caption{Estimação dos Parâmetros dos Itens para o Modelo Logístico(ML3PL) da TRI para a Prova do Enade/2017 no Curso de Sistemas de Informação do Brasil (\textbf{n=11.523}).}
+\begin{tabular}{c|l|c|c|c}
+\hline\hline 
+  Itens     &  Conteúdo Classificado                               &  $(a_{i})$  & $(b_{i})$ & $(c_{i})$ \\
+\hline\hline
+  Q01       &  Globalização e Política Internacional               &  1.18       &   1.64    &  0.02     \\
+  Q02       &  Vida Urbana/Rural/Trabalho;CTS.                     &  0.77       &   2.43    &  0.45     \\
+  Q03       &  Meio Ambiente;Responsabilidade Social               &  0.95       &   1.39    &  0.13     \\
+  Q04       &  TIC/Ciência/Tecnologia/Sociedade.                   &  2.03       &   0.87    &  0.53     \\
+  Q05       & Inovação Tecnológica/Meio Ambiente                   &  1.64       &   0.66    &  0.39      \\
+  Q06       & Processos Migratórios;Relações/Trabalho              &  4.67       &   0.52    &  0.78     \\
+  Q07       & Cultura e Arte                                       &  1.12       &   1.86    &  0.23      \\
+  Q08       & Responsabilidade Social/Ética e Cidadania            &  1.29       &   1.84    &  0.41     \\
+  Q09       & Algoritmos/Estruturas de Dados                       &  0.34       &  7,03    &  0.01     \\
+  Q10       & Engenharia de Software/Interação Homem-Computador.   &  0.33       &  5.15     &  0.002     \\
+  Q11       & Paradigmas de Linguagens de Programação.             &  2.63       &  -1.16    &  0.08     \\
+  Q12       & Arquitetura de Computadores/Sistemas Operacionais.   &  5.86       &  2.64     &  0.20    \\
+  Q13       & Sistemas Digitais.                                   &  1.10       &  1.17     &  0.001     \\
+  Q15       & Lógica e Matemática Discreta.                        &  7.19       &  2.63     &  0.11     \\
+  Q16       & Redes de Computadores                                &  12.34      &  2.44     &  0.22    \\
+  Q17       & Ética, Computador e Sociedade.                       &  10.61      &  2.33     &  0.17    \\
+  Q18       & Inteligência Artificial e Computacional.             &  0.75       &  1.19     &  0.11    \\
+  Q19       & Algoritmos/Estruturas de Dados.                      &  8.80       &  2.60     &  0.21     \\
+  Q20       & Banco de Dados.                                      &  6.27       &  2.64     &  0.18     \\
+  Q21       & Redes de Computadores.                               &   0.52      &  -6.32    &  0.15     \\
+  Q22       & Lógica e Matemática Discreta.                        &  2.46       &   2.74    &  0.14     \\
+  Q23       & Fundamentos e Técnicas de Programação.               &  2.64      &   -1.21   &  0.16     \\
+  Q24       & Teoria da Computação.                                &  0.33       &   5.55    &  0.008   \\
+  Q25       & Teoria dos Grafos/Algoritmos/Estruturas de Dados.    &  0.24       &   7.28    &  0.004   \\
+  Q26       & Teoria da Computação/Algoritmos/Estruturas de Dados. &  7.20       &   2.55    &  0.23   \\
+  Q27       & Computação Gráfica; Processamento de Imagem.         &  9.87       &   2.46    &  0.14   \\
+  Q28       & Computação Gráfica; Processamento de Imagem.         &  4.93       &   2.66    &  0.20  \\
+  Q29       & Engenharia de Software/Interação Homem-Computador.   &  0.52       &   5.14    &  0.09  \\
+  Q30       & Arquitetura de Computadores/Sistemas Operacionais.   &  0.47       &   3.23    &  0.007   \\
+  Q31       & Compiladores.                                        &  3.78       &   2.51    &  0.12    \\
+  Q32       & Sistemas Distribuídos.                               &  1.38      &   -2.91   &  0.17   \\
+  Q33       & Inteligência Artificial e Computacional.             &  11.75      &   2.27    &  0.24  \\
+  Q34       & Teoria da Computação/Algoritmos/Estruturas de Dados. &  5.06       &   2.51    &  0.17   \\
+  Q35       & Banco de Dados                                       &  5.30       &   2.39    &  0.18      \\
+\hline\hline
+\end{tabular}
+\end{table}
+\vskip0.3cm
 
 
 \newpage
+
+
+
+
+
+
 \section{Considerações Finais}
 
-Este estudo teve como objetivo mensurar o desempenho (proficiência) dos estudantes de Computação da UFPA no Enade, por meio da TRI. A partir da estimação realizada com ML2P, decorrente da TRI, foi realizada a mensuração da proficiência dos estudantes de Computação que fizeram a prova Enade/2017 e criada uma escala de medida padronizada.
+Este estudo teve como objetivo mensurar o desempenho (proficiência) dos estudantes de Computação no Enade, por meio da TRI. A partir da estimação realizada com ML3P, decorrente da TRI, foi realizada a mensuração da proficiência dos estudantes de Computação que fizeram a prova Enade/2017 e criada uma escala de medida padronizada.
 
 A análise dos itens (questões) evidenciou a capacidade da prova em mensurar a proficiência dos estudantes dos diferentes níveis de domínio cognitivo exigido pelo exame. Nesse contexto, a TRI demonstrou capacidade de capturar a distribuição da proficiência dos estudantes de Computação ao longo dos níveis exigidos pela prova.
 
@@ -248,9 +334,10 @@ Os resultados da pesquisa apontaram que os itens contidos na prova não apresent
 
 Vale ainda destacar que, enquanto estudos realizados com base na TCT abordam a questão do desempenho de maneira agregada, a análise pela TRI permitiu a identificação pontual dos conhecimentos, capacidades e habilidades exigidas em cada nível da escala. Ao desmembrar a proficiência em níveis, evidenciando os conhecimentos exigidos, é possível uma atuação pontual de professores, IES e respectivas autoridades nas questões específicas em que foram demonstradas deficiências na aprendizagem. 
 
+
 Dados os benefícios mencionados e apresentados pela TRI neste estudo, pesquisas posteriores, relacionadas a determinantes do desempenho de alunos em Computação poderiam adotar como base para mensuração do desempenho dos estudantes as medidas fornecidas por modelos baseados na TRI. Essa análise possibilitaria estudar determinantes baseados em diferentes níveis de proficiência, contribuindo para o avanço nos estudos relacionados a esta área.
 
-\newpage
+
 \section{Referências Bibliográficas}
 
 AKAIKE, H. A new look at the statistical model identification. IEEE Transactions on Automatic
@@ -268,7 +355,7 @@ Baker, F.B.(2001). The basics of item response theory. Washington, DC: ERIC.
 
 BORGATTO, A. F.; ANDRADE, D. F. de. Análise clássica de testes com diferentes graus de dificuldade. Estudos em Avaliação Educacional, São Paulo, v. 23, n. 52, p. 146–156, 2012.
 
-BRASIL Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira Sinaes. Brasília, 2017. Disponível em: Disponível em: http://portal.inep.gov.br/web/guest/sinaes Acesso em: 14 março. 2022.
+BRASIL Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira Sinaes. Brasília, 2017.
 
 CHARÃO, Andrea S.; WIECHORK, Karina; RODRIGUES, Marlon L. S.; BARBOSA, Fernando P.. Explorando Resultados por Questão no Enade em Ciência da Computação para Subsidiar Revisão de Projeto Pedagógico de Curso. In: WORKSHOP SOBRE EDUCAÇÃO EM COMPUTAÇÃO (WEI), 28. , 2020, Cuiabá. Anais [...]. Porto Alegre: Sociedade Brasileira de Computação, 2020 . p. 16-20. ISSN 2595-6175. DOI: https://doi.org/10.5753/wei.2020.11121.
 
@@ -278,8 +365,8 @@ Camargo, R. V. W., Camargo, R. de C. C. P., Andrade, D. F. de, \& Bornia, A. C. 
 
 Coelho, E. C., Ribeiro Junior, P. J. \& Bonat, W. H. (2014). Exame nacional de desenvolvimento de estudantes de estatística-desafios e perspectivas pela TRI. Revista da Estatística da Universidade Federal de Ouro Preto, 3(2), pp. 323-337.
 
-\newpage
-Chalmers, R., P. (2012). mirt: A Multidimensional Item Response Theory Package for the R Environment. Journal of Statistical Software, 48(6), 1-29. doi: 10.18637/jss.v048.i06.
+
+Chalmers, R., P. (2012). mirt: A Multidimensional Item Response Theory Package for the R Environment. Journal of Statistical Software, 48(6), 1-29. 
 
 CHENG, J. et al. Leaflet: Create Interactive Web Maps with the JavaScript ’Leaflet’. Library. 2016. Disponível em: . Acesso em: 03 out. 2016.
 
@@ -331,7 +418,7 @@ PRIMI, R.; HUTZ, C. S.; SILVA, M. C. R. A prova do ENADE de psicologia 2006: con
 
 Rasch, G. (1960, 1980). Probabilistic models for some intelligence and attainment tests. Chicago, IL: MESA Press.
 
-Rizopoulos, D. (2006). ltm: An R package for latent variable modelling and item response theory analyses. Journal of Statistical Software, 17(5), 1–25. URL http://www.jstatsoft.org/v17/ i05/.
+Rizopoulos, D. (2006). ltm: An R package for latent variable modelling and item response theory analyses. Journal of Statistical Software, 17(5), 1–25. 
 
 RABELO, M. Avaliação Educacional: Fundamentos, Metodologia e Aplicações no Contexto Brasileiro. Rio de Janeiro. SBM, 2013.
 
